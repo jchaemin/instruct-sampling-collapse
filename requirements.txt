@@ -1,0 +1,15 @@
+# Python >= 3.10
+openai>=1.0
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+matplotlib>=3.7
+statsmodels>=0.14
+
+# The local-model subcommands only (run.py ladder / knockout / openended /
+# open-model-replication / matched-ppa / nonlikert) additionally need:
+#   torch>=2.1
+#   transformers>=4.40
+# They are commented out here so the API-based and analysis code can be
+# installed without a GPU stack. `analyze.py verify` needs only numpy,
+# pandas, and scipy.

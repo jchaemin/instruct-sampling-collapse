@@ -1,0 +1,152 @@
+[
+ {
+  "model": "olmo2-instruct",
+  "task": "important_problem",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 42,
+  "top1": "Economic Inequality",
+  "top1_share": 0.485,
+  "entropy_nats": 2.059
+ },
+ {
+  "model": "olmo2-instruct",
+  "task": "important_problem",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 43,
+  "top1": "Economic Inequality",
+  "top1_share": 0.475,
+  "entropy_nats": 2.134
+ },
+ {
+  "model": "olmo2-instruct",
+  "task": "important_problem",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 72,
+  "top1": "Economic Inequality",
+  "top1_share": 0.295,
+  "entropy_nats": 3.189
+ },
+ {
+  "model": "olmo2-instruct",
+  "task": "news_source",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 144,
+  "top1": "Cnn",
+  "top1_share": 0.065,
+  "entropy_nats": 4.664
+ },
+ {
+  "model": "olmo2-instruct",
+  "task": "news_source",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 146,
+  "top1": "Cnn",
+  "top1_share": 0.07,
+  "entropy_nats": 4.69
+ },
+ {
+  "model": "olmo2-instruct",
+  "task": "news_source",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 112,
+  "top1": "Cnn",
+  "top1_share": 0.17,
+  "entropy_nats": 3.923
+ },
+ {
+  "model": "olmo2-instruct",
+  "task": "policy_priority",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 44,
+  "top1": "Infrastructure Investment",
+  "top1_share": 0.33,
+  "entropy_nats": 2.676
+ },
+ {
+  "model": "olmo2-instruct",
+  "task": "policy_priority",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 41,
+  "top1": "Infrastructure Investment",
+  "top1_share": 0.395,
+  "entropy_nats": 2.504
+ },
+ {
+  "model": "olmo2-instruct",
+  "task": "policy_priority",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 88,
+  "top1": "Climate Change",
+  "top1_share": 0.105,
+  "entropy_nats": 3.791
+ },
+ {
+  "model": "olmo2-instruct",
+  "task": "respondent_occupation",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 21,
+  "top1": "Data Analyst",
+  "top1_share": 0.48,
+  "entropy_nats": 1.618
+ },
+ {
+  "model": "olmo2-instruct",
+  "task": "respondent_occupation",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 23,
+  "top1": "Data Analyst",
+  "top1_share": 0.485,
+  "entropy_nats": 1.731
+ },
+ {
+  "model": "olmo2-instruct",
+  "task": "respondent_occupation",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 48,
+  "top1": "Software Engineer",
+  "top1_share": 0.255,
+  "entropy_nats": 2.639
+ },
+ {
+  "model": "olmo2-instruct",
+  "task": "respondent_city",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 55,
+  "top1": "Austin",
+  "top1_share": 0.145,
+  "entropy_nats": 3.386
+ },
+ {
+  "model": "olmo2-instruct",
+  "task": "respondent_city",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 57,
+  "top1": "Austin",
+  "top1_share": 0.17,
+  "entropy_nats": 3.374
+ },
+ {
+  "model": "olmo2-instruct",
+  "task": "respondent_city",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 73,
+  "top1": "Chicago",
+  "top1_share": 0.14,
+  "entropy_nats": 3.611
+ }
+]

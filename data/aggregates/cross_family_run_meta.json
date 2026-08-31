@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-25T10:46:45.224302Z",
+  "models": {
+    "gpt-5.4": "openai/gpt-5.4",
+    "claude-sonnet-4.5": "anthropic/claude-sonnet-4.5",
+    "llama-3.3-70b": "meta-llama/llama-3.3-70b-instruct",
+    "gemini-3-flash": "google/gemini-3-flash-preview",
+    "deepseek-chat": "deepseek/deepseek-chat"
+  },
+  "n_samples": 200,
+  "cost": {
+    "claude-sonnet-4.5": 1.2696990000000319,
+    "llama-3.3-70b": 0.0481620600000005,
+    "gemini-3-flash": 0.3036015000000156,
+    "deepseek-chat": 0.1846800900000007
+  }
+}

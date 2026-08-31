@@ -1,0 +1,634 @@
+{
+ "olmo_sft": {
+  "label": "OLMo-2 base -> SFT",
+  "alphas": [
+   0.0,
+   0.25,
+   0.5,
+   0.75,
+   1.0,
+   1.25
+  ],
+  "tasks": [
+   "uniform_digit",
+   "fair_coin",
+   "skewed_binary",
+   "bimodal_5way",
+   "skewed_5way"
+  ],
+  "N": 200,
+  "seed": 13,
+  "results": {
+   "base_ref": {
+    "uniform_digit": {
+     "tv": 0.09743589743589742,
+     "mode_share": 0.2512820512820513,
+     "parse": 195,
+     "logit_maxprob": 0.2517784340670982,
+     "logit_entropy": 1.5866653040011862
+    },
+    "fair_coin": {
+     "tv": 0.14500000000000002,
+     "mode_share": 0.645,
+     "parse": 200,
+     "logit_maxprob": 0.6543979613888545,
+     "logit_entropy": 0.6446815354414275
+    },
+    "skewed_binary": {
+     "tv": 0.11836734693877551,
+     "mode_share": 0.5816326530612245,
+     "parse": 196,
+     "logit_maxprob": 0.574693162918225,
+     "logit_entropy": 0.6819471670912509
+    },
+    "bimodal_5way": {
+     "tv": 0.5091836734693878,
+     "mode_share": 0.25510204081632654,
+     "parse": 196,
+     "logit_maxprob": 0.2506835516807123,
+     "logit_entropy": 1.5723772437203545
+    },
+    "skewed_5way": {
+     "tv": 0.31122448979591844,
+     "mode_share": 0.2602040816326531,
+     "parse": 196,
+     "logit_maxprob": 0.2438167680007851,
+     "logit_entropy": 1.5955839829263723
+    },
+    "_mean": {
+     "tv": 0.2362422815279958,
+     "logit_maxprob": 0.395073975611135,
+     "logit_entropy": 1.2162510466361183
+    }
+   },
+   "alpha_0.0": {
+    "uniform_digit": {
+     "tv": 0.09743589743589742,
+     "mode_share": 0.2512820512820513,
+     "parse": 195,
+     "logit_maxprob": 0.2517784340670982,
+     "logit_entropy": 1.5866653040011862
+    },
+    "fair_coin": {
+     "tv": 0.14500000000000002,
+     "mode_share": 0.645,
+     "parse": 200,
+     "logit_maxprob": 0.6543979613888545,
+     "logit_entropy": 0.6446815354414275
+    },
+    "skewed_binary": {
+     "tv": 0.11836734693877551,
+     "mode_share": 0.5816326530612245,
+     "parse": 196,
+     "logit_maxprob": 0.574693162918225,
+     "logit_entropy": 0.6819471670912509
+    },
+    "bimodal_5way": {
+     "tv": 0.5091836734693878,
+     "mode_share": 0.25510204081632654,
+     "parse": 196,
+     "logit_maxprob": 0.2506835516807123,
+     "logit_entropy": 1.5723772437203545
+    },
+    "skewed_5way": {
+     "tv": 0.31122448979591844,
+     "mode_share": 0.2602040816326531,
+     "parse": 196,
+     "logit_maxprob": 0.2438167680007851,
+     "logit_entropy": 1.5955839829263723
+    },
+    "_mean": {
+     "tv": 0.2362422815279958,
+     "logit_maxprob": 0.395073975611135,
+     "logit_entropy": 1.2162510466361183
+    }
+   },
+   "alpha_0.25": {
+    "uniform_digit": {
+     "tv": 0.11065989847715736,
+     "mode_share": 0.2639593908629442,
+     "parse": 197,
+     "logit_maxprob": 0.26022014233557494,
+     "logit_entropy": 1.5692378337340327
+    },
+    "fair_coin": {
+     "tv": 0.11499999999999999,
+     "mode_share": 0.615,
+     "parse": 200,
+     "logit_maxprob": 0.6331834746748422,
+     "logit_entropy": 0.6572396174530344
+    },
+    "skewed_binary": {
+     "tv": 0.09086294416243651,
+     "mode_share": 0.6091370558375635,
+     "parse": 197,
+     "logit_maxprob": 0.5959629393988092,
+     "logit_entropy": 0.674614637980298
+    },
+    "bimodal_5way": {
+     "tv": 0.5244897959183674,
+     "mode_share": 0.27040816326530615,
+     "parse": 196,
+     "logit_maxprob": 0.2700911447816392,
+     "logit_entropy": 1.568903354182219
+    },
+    "skewed_5way": {
+     "tv": 0.32653061224489793,
+     "mode_share": 0.2653061224489796,
+     "parse": 196,
+     "logit_maxprob": 0.2614081920070857,
+     "logit_entropy": 1.5866667515493096
+    },
+    "_mean": {
+     "tv": 0.23350865016057182,
+     "logit_maxprob": 0.40417317863959024,
+     "logit_entropy": 1.2113324389797788
+    }
+   },
+   "alpha_0.5": {
+    "uniform_digit": {
+     "tv": 0.2313131313131313,
+     "mode_share": 0.35858585858585856,
+     "parse": 198,
+     "logit_maxprob": 0.3207485340081886,
+     "logit_entropy": 1.5157071238575404
+    },
+    "fair_coin": {
+     "tv": 0.10499999999999998,
+     "mode_share": 0.605,
+     "parse": 200,
+     "logit_maxprob": 0.6206216088633008,
+     "logit_entropy": 0.6637589988460542
+    },
+    "skewed_binary": {
+     "tv": 0.05353535353535349,
+     "mode_share": 0.6464646464646465,
+     "parse": 198,
+     "logit_maxprob": 0.6261241772283034,
+     "logit_entropy": 0.6609862824912653
+    },
+    "bimodal_5way": {
+     "tv": 0.5448979591836736,
+     "mode_share": 0.32653061224489793,
+     "parse": 196,
+     "logit_maxprob": 0.3018006854984893,
+     "logit_entropy": 1.5555629766445132
+    },
+    "skewed_5way": {
+     "tv": 0.336734693877551,
+     "mode_share": 0.27040816326530615,
+     "parse": 196,
+     "logit_maxprob": 0.28709071493728106,
+     "logit_entropy": 1.5721793831488982
+    },
+    "_mean": {
+     "tv": 0.25429622758194187,
+     "logit_maxprob": 0.4312771441071127,
+     "logit_entropy": 1.193638952997654
+    }
+   },
+   "alpha_0.75": {
+    "uniform_digit": {
+     "tv": 0.315,
+     "mode_share": 0.405,
+     "parse": 200,
+     "logit_maxprob": 0.4081272619726709,
+     "logit_entropy": 1.3811213552497585
+    },
+    "fair_coin": {
+     "tv": 0.09,
+     "mode_share": 0.59,
+     "parse": 200,
+     "logit_maxprob": 0.6011253440753982,
+     "logit_entropy": 0.6725527400927754
+    },
+    "skewed_binary": {
+     "tv": 0.033333333333333326,
+     "mode_share": 0.6666666666666666,
+     "parse": 198,
+     "logit_maxprob": 0.6424324776295582,
+     "logit_entropy": 0.6520057810579355
+    },
+    "bimodal_5way": {
+     "tv": 0.5653061224489796,
+     "mode_share": 0.3163265306122449,
+     "parse": 196,
+     "logit_maxprob": 0.30462446968966156,
+     "logit_entropy": 1.523739383388488
+    },
+    "skewed_5way": {
+     "tv": 0.36836734693877554,
+     "mode_share": 0.33163265306122447,
+     "parse": 196,
+     "logit_maxprob": 0.3213300247568842,
+     "logit_entropy": 1.5474310787764083
+    },
+    "_mean": {
+     "tv": 0.2744013605442177,
+     "logit_maxprob": 0.45552791562483463,
+     "logit_entropy": 1.1553700677130732
+    }
+   },
+   "alpha_1.0": {
+    "uniform_digit": {
+     "tv": 0.42000000000000004,
+     "mode_share": 0.49,
+     "parse": 200,
+     "logit_maxprob": 0.5002083866998966,
+     "logit_entropy": 1.158513388415624
+    },
+    "fair_coin": {
+     "tv": 0.020000000000000018,
+     "mode_share": 0.52,
+     "parse": 200,
+     "logit_maxprob": 0.5467381519846138,
+     "logit_entropy": 0.6887718860584797
+    },
+    "skewed_binary": {
+     "tv": 0.12713567839195977,
+     "mode_share": 0.5728643216080402,
+     "parse": 199,
+     "logit_maxprob": 0.5640984800226174,
+     "logit_entropy": 0.6849072933766136
+    },
+    "bimodal_5way": {
+     "tv": 0.6265306122448979,
+     "mode_share": 0.41836734693877553,
+     "parse": 196,
+     "logit_maxprob": 0.42915928597143477,
+     "logit_entropy": 1.4105670013633391
+    },
+    "skewed_5way": {
+     "tv": 0.3903553299492386,
+     "mode_share": 0.3604060913705584,
+     "parse": 197,
+     "logit_maxprob": 0.3459342076309027,
+     "logit_entropy": 1.5244462665604177
+    },
+    "_mean": {
+     "tv": 0.31680432411721926,
+     "logit_maxprob": 0.47722770246189306,
+     "logit_entropy": 1.093441167154895
+    }
+   },
+   "alpha_1.25": {
+    "uniform_digit": {
+     "tv": 0.5299999999999999,
+     "mode_share": 0.63,
+     "parse": 200,
+     "logit_maxprob": 0.6116590063017002,
+     "logit_entropy": 0.9144142616685973
+    },
+    "fair_coin": {
+     "tv": 0.09296482412060303,
+     "mode_share": 0.592964824120603,
+     "parse": 199,
+     "logit_maxprob": 0.5640984800226174,
+     "logit_entropy": 0.6849072933766136
+    },
+    "skewed_binary": {
+     "tv": 0.225,
+     "mode_share": 0.525,
+     "parse": 200,
+     "logit_maxprob": 0.5717666019337796,
+     "logit_entropy": 0.6828106260785571
+    },
+    "bimodal_5way": {
+     "tv": 0.7383838383838385,
+     "mode_share": 0.6262626262626263,
+     "parse": 198,
+     "logit_maxprob": 0.6351517257581424,
+     "logit_entropy": 1.108239113972512
+    },
+    "skewed_5way": {
+     "tv": 0.463819095477387,
+     "mode_share": 0.3869346733668342,
+     "parse": 199,
+     "logit_maxprob": 0.36606730988576186,
+     "logit_entropy": 1.4769306736025642
+    },
+    "_mean": {
+     "tv": 0.4100335515963657,
+     "logit_maxprob": 0.5497486247804003,
+     "logit_entropy": 0.973460393739769
+    }
+   }
+  }
+ },
+ "qwen_instruct": {
+  "label": "Qwen2.5 base -> Instruct",
+  "alphas": [
+   0.0,
+   0.25,
+   0.5,
+   0.75,
+   1.0,
+   1.25
+  ],
+  "tasks": [
+   "uniform_digit",
+   "fair_coin",
+   "skewed_binary",
+   "bimodal_5way",
+   "skewed_5way"
+  ],
+  "N": 200,
+  "seed": 13,
+  "results": {
+   "base_ref": {
+    "uniform_digit": {
+     "tv": 0.1575757575757576,
+     "mode_share": 0.31313131313131315,
+     "parse": 198,
+     "logit_maxprob": 0.34564257559352257,
+     "logit_entropy": 1.4466533323606332
+    },
+    "fair_coin": {
+     "tv": 0.1313131313131313,
+     "mode_share": 0.6313131313131313,
+     "parse": 198,
+     "logit_maxprob": 0.6297746213017459,
+     "logit_entropy": 0.6590755220682789
+    },
+    "skewed_binary": {
+     "tv": 0.118848167539267,
+     "mode_share": 0.581151832460733,
+     "parse": 191,
+     "logit_maxprob": 0.5964331462646254,
+     "logit_entropy": 0.6744314226384893
+    },
+    "bimodal_5way": {
+     "tv": 0.2696335078534031,
+     "mode_share": 0.5235602094240838,
+     "parse": 191,
+     "logit_maxprob": 0.5072842575151334,
+     "logit_entropy": 1.307698103575533
+    },
+    "skewed_5way": {
+     "tv": 0.3112244897959183,
+     "mode_share": 0.8112244897959183,
+     "parse": 196,
+     "logit_maxprob": 0.8590419596858138,
+     "logit_entropy": 0.5806967208831341
+    },
+    "_mean": {
+     "tv": 0.19771901081549545,
+     "logit_maxprob": 0.5876353120721682,
+     "logit_entropy": 0.9337110203052138
+    }
+   },
+   "alpha_0.0": {
+    "uniform_digit": {
+     "tv": 0.1575757575757576,
+     "mode_share": 0.31313131313131315,
+     "parse": 198,
+     "logit_maxprob": 0.34564257559352257,
+     "logit_entropy": 1.4466533323606332
+    },
+    "fair_coin": {
+     "tv": 0.1313131313131313,
+     "mode_share": 0.6313131313131313,
+     "parse": 198,
+     "logit_maxprob": 0.6297746213017459,
+     "logit_entropy": 0.6590755220682789
+    },
+    "skewed_binary": {
+     "tv": 0.118848167539267,
+     "mode_share": 0.581151832460733,
+     "parse": 191,
+     "logit_maxprob": 0.5964331462646254,
+     "logit_entropy": 0.6744314226384893
+    },
+    "bimodal_5way": {
+     "tv": 0.2696335078534031,
+     "mode_share": 0.5235602094240838,
+     "parse": 191,
+     "logit_maxprob": 0.5072842575151334,
+     "logit_entropy": 1.307698103575533
+    },
+    "skewed_5way": {
+     "tv": 0.3112244897959183,
+     "mode_share": 0.8112244897959183,
+     "parse": 196,
+     "logit_maxprob": 0.8590419596858138,
+     "logit_entropy": 0.5806967208831341
+    },
+    "_mean": {
+     "tv": 0.19771901081549545,
+     "logit_maxprob": 0.5876353120721682,
+     "logit_entropy": 0.9337110203052138
+    }
+   },
+   "alpha_0.25": {
+    "uniform_digit": {
+     "tv": 0.22500000000000003,
+     "mode_share": 0.365,
+     "parse": 200,
+     "logit_maxprob": 0.37678007906021566,
+     "logit_entropy": 1.4145888294060496
+    },
+    "fair_coin": {
+     "tv": 0.15326633165829148,
+     "mode_share": 0.6532663316582915,
+     "parse": 199,
+     "logit_maxprob": 0.6548947290421275,
+     "logit_entropy": 0.6443638394906104
+    },
+    "skewed_binary": {
+     "tv": 0.15499999999999997,
+     "mode_share": 0.545,
+     "parse": 200,
+     "logit_maxprob": 0.5583269943353745,
+     "logit_entropy": 0.6863275875873573
+    },
+    "bimodal_5way": {
+     "tv": 0.29591836734693877,
+     "mode_share": 0.5306122448979592,
+     "parse": 196,
+     "logit_maxprob": 0.5204938017224257,
+     "logit_entropy": 1.2184463021384015
+    },
+    "skewed_5way": {
+     "tv": 0.41,
+     "mode_share": 0.91,
+     "parse": 200,
+     "logit_maxprob": 0.9341921933222358,
+     "logit_entropy": 0.32047450397638666
+    },
+    "_mean": {
+     "tv": 0.24783693980104604,
+     "logit_maxprob": 0.6089375594964759,
+     "logit_entropy": 0.8568402125197612
+    }
+   },
+   "alpha_0.5": {
+    "uniform_digit": {
+     "tv": 0.275,
+     "mode_share": 0.46,
+     "parse": 200,
+     "logit_maxprob": 0.46910027650686287,
+     "logit_entropy": 1.330196701681609
+    },
+    "fair_coin": {
+     "tv": 0.17500000000000002,
+     "mode_share": 0.675,
+     "parse": 200,
+     "logit_maxprob": 0.682573740869499,
+     "logit_entropy": 0.6249142016362823
+    },
+    "skewed_binary": {
+     "tv": 0.17499999999999996,
+     "mode_share": 0.525,
+     "parse": 200,
+     "logit_maxprob": 0.5195213219520929,
+     "logit_entropy": 0.6923848227889393
+    },
+    "bimodal_5way": {
+     "tv": 0.355,
+     "mode_share": 0.53,
+     "parse": 200,
+     "logit_maxprob": 0.5262971868717402,
+     "logit_entropy": 1.055918970917019
+    },
+    "skewed_5way": {
+     "tv": 0.475,
+     "mode_share": 0.975,
+     "parse": 200,
+     "logit_maxprob": 0.9774841291485219,
+     "logit_entropy": 0.1326329502491204
+    },
+    "_mean": {
+     "tv": 0.29100000000000004,
+     "logit_maxprob": 0.6349953310697434,
+     "logit_entropy": 0.767209529454594
+    }
+   },
+   "alpha_0.75": {
+    "uniform_digit": {
+     "tv": 0.515,
+     "mode_share": 0.715,
+     "parse": 200,
+     "logit_maxprob": 0.7143989605738029,
+     "logit_entropy": 0.9257461505409509
+    },
+    "fair_coin": {
+     "tv": 0.275,
+     "mode_share": 0.775,
+     "parse": 200,
+     "logit_maxprob": 0.7520125737597972,
+     "logit_entropy": 0.5601132857320446
+    },
+    "skewed_binary": {
+     "tv": 0.17499999999999996,
+     "mode_share": 0.525,
+     "parse": 200,
+     "logit_maxprob": 0.523420348936324,
+     "logit_entropy": 0.6920497535638965
+    },
+    "bimodal_5way": {
+     "tv": 0.43000000000000005,
+     "mode_share": 0.56,
+     "parse": 200,
+     "logit_maxprob": 0.5246641023610589,
+     "logit_entropy": 0.8676994529277138
+    },
+    "skewed_5way": {
+     "tv": 0.49999999999999994,
+     "mode_share": 1.0,
+     "parse": 200,
+     "logit_maxprob": 0.9964401084698108,
+     "logit_entropy": 0.027262984380780494
+    },
+    "_mean": {
+     "tv": 0.379,
+     "logit_maxprob": 0.7021872188201588,
+     "logit_entropy": 0.6145743254290772
+    }
+   },
+   "alpha_1.0": {
+    "uniform_digit": {
+     "tv": 0.7600000000000001,
+     "mode_share": 0.96,
+     "parse": 200,
+     "logit_maxprob": 0.965150118919463,
+     "logit_entropy": 0.1804834184688942
+    },
+    "fair_coin": {
+     "tv": 0.48,
+     "mode_share": 0.98,
+     "parse": 200,
+     "logit_maxprob": 0.9353465057864693,
+     "logit_entropy": 0.23958427251216996
+    },
+    "skewed_binary": {
+     "tv": 0.05500000000000002,
+     "mode_share": 0.755,
+     "parse": 200,
+     "logit_maxprob": 0.7718434925908525,
+     "logit_entropy": 0.5370392159197255
+    },
+    "bimodal_5way": {
+     "tv": 0.5,
+     "mode_share": 0.625,
+     "parse": 200,
+     "logit_maxprob": 0.5747495354814584,
+     "logit_entropy": 0.70850157104849
+    },
+    "skewed_5way": {
+     "tv": 0.49999999999999994,
+     "mode_share": 1.0,
+     "parse": 200,
+     "logit_maxprob": 0.9999302324756424,
+     "logit_entropy": 0.0007912880809469228
+    },
+    "_mean": {
+     "tv": 0.45899999999999996,
+     "logit_maxprob": 0.8494039770507772,
+     "logit_entropy": 0.33327995320604525
+    }
+   },
+   "alpha_1.25": {
+    "uniform_digit": {
+     "tv": 0.7949999999999999,
+     "mode_share": 0.995,
+     "parse": 200,
+     "logit_maxprob": 0.996274774879158,
+     "logit_entropy": 0.025897356814491252
+    },
+    "fair_coin": {
+     "tv": 0.5,
+     "mode_share": 1.0,
+     "parse": 200,
+     "logit_maxprob": 0.9987156917163593,
+     "logit_entropy": 0.009833810563604294
+    },
+    "skewed_binary": {
+     "tv": 0.30000000000000004,
+     "mode_share": 1.0,
+     "parse": 200,
+     "logit_maxprob": 0.9962927480044949,
+     "logit_entropy": 0.024451582617362806
+    },
+    "bimodal_5way": {
+     "tv": 0.5,
+     "mode_share": 0.76,
+     "parse": 200,
+     "logit_maxprob": 0.743147505920888,
+     "logit_entropy": 0.5700187815401793
+    },
+    "skewed_5way": {
+     "tv": 0.49999999999999994,
+     "mode_share": 1.0,
+     "parse": 200,
+     "logit_maxprob": 0.9999999367225478,
+     "logit_entropy": 1.1345567540533279e-06
+    },
+    "_mean": {
+     "tv": 0.5189999999999999,
+     "logit_maxprob": 0.9468861314486896,
+     "logit_entropy": 0.12604053321847836
+    }
+   }
+  }
+ }
+}

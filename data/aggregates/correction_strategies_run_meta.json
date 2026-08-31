@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-05-23T09:34:47.127221Z",
+  "openai_version": "2.15.0",
+  "model_string": "gpt-4o",
+  "n_samples": 200,
+  "n_threads": 16,
+  "variants": [
+    "V1_verbatim",
+    "V2_apologetic",
+    "V3_third_person",
+    "V4_explicit_bias",
+    "V5_icl",
+    "V6_reasoning"
+  ],
+  "tasks": [
+    "uniform_digit",
+    "coin_flip"
+  ]
+}

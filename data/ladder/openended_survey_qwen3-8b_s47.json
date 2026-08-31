@@ -1,0 +1,152 @@
+[
+ {
+  "model": "qwen3-8b",
+  "task": "important_problem",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 25,
+  "top1": "Economic Inequality And Political Polarization",
+  "top1_share": 0.41,
+  "entropy_nats": 2.032
+ },
+ {
+  "model": "qwen3-8b",
+  "task": "important_problem",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 24,
+  "top1": "Economic Inequality And Political Polarization",
+  "top1_share": 0.405,
+  "entropy_nats": 2.014
+ },
+ {
+  "model": "qwen3-8b",
+  "task": "important_problem",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 32,
+  "top1": "Economic Inequality",
+  "top1_share": 0.27,
+  "entropy_nats": 2.618
+ },
+ {
+  "model": "qwen3-8b",
+  "task": "news_source",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 8,
+  "top1": "I Do Not Rely On Any Single News Outlet For News",
+  "top1_share": 0.59,
+  "entropy_nats": 1.108
+ },
+ {
+  "model": "qwen3-8b",
+  "task": "news_source",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 8,
+  "top1": "I Do Not Rely On Any Single News Outlet For News",
+  "top1_share": 0.61,
+  "entropy_nats": 1.1
+ },
+ {
+  "model": "qwen3-8b",
+  "task": "news_source",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 62,
+  "top1": "Bbc News",
+  "top1_share": 0.17,
+  "entropy_nats": 3.317
+ },
+ {
+  "model": "qwen3-8b",
+  "task": "policy_priority",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 15,
+  "top1": "Climate Change Mitigation",
+  "top1_share": 0.425,
+  "entropy_nats": 1.76
+ },
+ {
+  "model": "qwen3-8b",
+  "task": "policy_priority",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 18,
+  "top1": "Climate Change Mitigation",
+  "top1_share": 0.465,
+  "entropy_nats": 1.742
+ },
+ {
+  "model": "qwen3-8b",
+  "task": "policy_priority",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 64,
+  "top1": "Healthcare Reform",
+  "top1_share": 0.18,
+  "entropy_nats": 3.376
+ },
+ {
+  "model": "qwen3-8b",
+  "task": "respondent_occupation",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 19,
+  "top1": "Artificial Intelligence Data Analyst",
+  "top1_share": 0.34,
+  "entropy_nats": 1.927
+ },
+ {
+  "model": "qwen3-8b",
+  "task": "respondent_occupation",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 18,
+  "top1": "Artificial Intelligence Data Analyst",
+  "top1_share": 0.295,
+  "entropy_nats": 2.081
+ },
+ {
+  "model": "qwen3-8b",
+  "task": "respondent_occupation",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 44,
+  "top1": "Software Engineer",
+  "top1_share": 0.205,
+  "entropy_nats": 3.085
+ },
+ {
+  "model": "qwen3-8b",
+  "task": "respondent_city",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 9,
+  "top1": "Austin",
+  "top1_share": 0.915,
+  "entropy_nats": 0.444
+ },
+ {
+  "model": "qwen3-8b",
+  "task": "respondent_city",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 9,
+  "top1": "Austin",
+  "top1_share": 0.85,
+  "entropy_nats": 0.626
+ },
+ {
+  "model": "qwen3-8b",
+  "task": "respondent_city",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 36,
+  "top1": "Austin",
+  "top1_share": 0.34,
+  "entropy_nats": 2.521
+ }
+]

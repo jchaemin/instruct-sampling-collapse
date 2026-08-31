@@ -1,0 +1,1175 @@
+{
+ "new_50_keys": [
+  "AGEMAJ_W41",
+  "CLASS_W32",
+  "COMMYRS_W32",
+  "FAMNEAR_W32",
+  "GAP21Q15_a_W82",
+  "GAP21Q15_b_W82",
+  "GAP21Q15_c_W82",
+  "GAP21Q15_d_W82",
+  "GAP21Q15_e_W82",
+  "GAP21Q15_f_W82",
+  "MADEUPSMCLICK_W45",
+  "NEIGHINTERA_W32",
+  "NEIGHINTERB_W32",
+  "NEIGHINTERC_W32",
+  "NEIGHINTERD_W32",
+  "NEIGHSAMEA_W32",
+  "NEIGHSAMEB_W32",
+  "NEIGHSAMEC_W32",
+  "NEWSPREFV2_W45",
+  "PWMAN2_W49",
+  "RACESURV47e_W43",
+  "RACESURV47f_W43",
+  "RACESURV5a_W43",
+  "RACESURV5c_W43",
+  "RACESURV5d_W43",
+  "RACESURV5e_W43",
+  "RACESURV5f_W43",
+  "RACESURV5g_W43",
+  "RACESURV5h_W43",
+  "RACESURV5i_W43",
+  "RACESURV5j_W43",
+  "RACESURV5k_W43",
+  "RACESURV5l_W43",
+  "RACESURV9_W43",
+  "RESTRICTWHO_W45",
+  "ROMRELDUR_W50",
+  "SMSHARE_W45",
+  "SOCIETY_JBCLL_W92",
+  "SOCIETY_RHIST_W92",
+  "SOCIETY_WHT_W92",
+  "TRACKCO1a_W49",
+  "TRACKCO1b_W49",
+  "TRACKGOV1a_W49",
+  "TRACKGOV1b_W49",
+  "USMILSIZ_W92",
+  "WORRY2a_W54",
+  "WORRY2b_W54",
+  "WORRY2c_W54",
+  "WORRY2d_W54",
+  "WORRY2e_W54"
+ ],
+ "all_100_keys": [
+  "SOCIETY_TRANS_W92",
+  "SOCIETY_RELG_W92",
+  "SOCIETY_GUNS_W92",
+  "SOCIETY_SSM_W92",
+  "LEGALIMMIGAMT_W92",
+  "ETHNCMAJMOD_W41",
+  "INTRMAR_W41",
+  "RACESURV5b_W43",
+  "ECON5_d_W54",
+  "ECON5_b_W54",
+  "EAT1_W34",
+  "EAT2_W34",
+  "PP1_W49",
+  "CAREREL_W27",
+  "CARS4_W27",
+  "COHABDUR_W50",
+  "ECON5_a_W54",
+  "ECON5_c_W54",
+  "ECON5_e_W54",
+  "ECON5_f_W54",
+  "ECON5_g_W54",
+  "ECON5_h_W54",
+  "ECON5_i_W54",
+  "ECON5_j_W54",
+  "ECON5_k_W54",
+  "FAMSURV17_W50",
+  "IMPREASONGUN_W26",
+  "INDUSTRY_W27",
+  "MARRDUR_W50",
+  "ORIENTATIONMOD_W50",
+  "RACESURV18a_W43",
+  "RACESURV18b_W43",
+  "RACESURV18c_W43",
+  "RACESURV18d_W43",
+  "RACESURV18e_W43",
+  "RACESURV18f_W43",
+  "RACESURV2_W43",
+  "RACESURV34a_W43",
+  "RACESURV34b_W43",
+  "RACESURV34c_W43",
+  "RACESURV34d_W43",
+  "RACESURV34e_W43",
+  "RACESURV40_W43",
+  "RACESURV41_W43",
+  "RACESURV44_W43",
+  "RACESURV45_W43",
+  "RACESURV47a_W43",
+  "RACESURV47b_W43",
+  "RACESURV47c_W43",
+  "RACESURV47d_W43",
+  "AGEMAJ_W41",
+  "CLASS_W32",
+  "COMMYRS_W32",
+  "FAMNEAR_W32",
+  "GAP21Q15_a_W82",
+  "GAP21Q15_b_W82",
+  "GAP21Q15_c_W82",
+  "GAP21Q15_d_W82",
+  "GAP21Q15_e_W82",
+  "GAP21Q15_f_W82",
+  "MADEUPSMCLICK_W45",
+  "NEIGHINTERA_W32",
+  "NEIGHINTERB_W32",
+  "NEIGHINTERC_W32",
+  "NEIGHINTERD_W32",
+  "NEIGHSAMEA_W32",
+  "NEIGHSAMEB_W32",
+  "NEIGHSAMEC_W32",
+  "NEWSPREFV2_W45",
+  "PWMAN2_W49",
+  "RACESURV47e_W43",
+  "RACESURV47f_W43",
+  "RACESURV5a_W43",
+  "RACESURV5c_W43",
+  "RACESURV5d_W43",
+  "RACESURV5e_W43",
+  "RACESURV5f_W43",
+  "RACESURV5g_W43",
+  "RACESURV5h_W43",
+  "RACESURV5i_W43",
+  "RACESURV5j_W43",
+  "RACESURV5k_W43",
+  "RACESURV5l_W43",
+  "RACESURV9_W43",
+  "RESTRICTWHO_W45",
+  "ROMRELDUR_W50",
+  "SMSHARE_W45",
+  "SOCIETY_JBCLL_W92",
+  "SOCIETY_RHIST_W92",
+  "SOCIETY_WHT_W92",
+  "TRACKCO1a_W49",
+  "TRACKCO1b_W49",
+  "TRACKGOV1a_W49",
+  "TRACKGOV1b_W49",
+  "USMILSIZ_W92",
+  "WORRY2a_W54",
+  "WORRY2b_W54",
+  "WORRY2c_W54",
+  "WORRY2d_W54",
+  "WORRY2e_W54"
+ ],
+ "new_item_details": [
+  {
+   "key": "AGEMAJ_W41",
+   "wave": "W41",
+   "question": "According to the U.S. Census Bureau, by the year 2050, the number of people in the population who are 65 or older will outnumber people younger than 18. In terms of its impact on the country, do you t",
+   "options_pew_order": [
+    "A very good thing",
+    "A somewhat good thing",
+    "A somewhat bad thing",
+    "A very bad thing",
+    "Neither a good nor bad thing"
+   ],
+   "pew_dist": [
+    0.03709613083366574,
+    0.1364180295173514,
+    0.4323893099321899,
+    0.12046270442760271,
+    0.2736338252891903
+   ],
+   "pew_entropy_normalized": 0.8487740579662572
+  },
+  {
+   "key": "CLASS_W32",
+   "wave": "W32",
+   "question": "If you were asked to use one of these commonly used names for the social classes, which would you say you belong in?",
+   "options_pew_order": [
+    "Upper class",
+    "Upper-middle class",
+    "Middle class",
+    "Lower-middle class",
+    "Lower class"
+   ],
+   "pew_dist": [
+    0.016113438607798906,
+    0.21559780857234934,
+    0.4795359329680954,
+    0.2336448598130841,
+    0.05510796003867225
+   ],
+   "pew_entropy_normalized": 0.7761615012764201
+  },
+  {
+   "key": "COMMYRS_W32",
+   "wave": "W32",
+   "question": "About how many years have you lived in your local community?",
+   "options_pew_order": [
+    "Less than 1 year",
+    "1-5 years",
+    "6-10 years",
+    "11-20 years",
+    "More than 20 years"
+   ],
+   "pew_dist": [
+    0.05106451096526333,
+    0.20954057947814952,
+    0.12822154634224428,
+    0.20617896590363374,
+    0.40499439731070913
+   ],
+   "pew_entropy_normalized": 0.8912243489684725
+  },
+  {
+   "key": "FAMNEAR_W32",
+   "wave": "W32",
+   "question": "Thinking about members of your extended family who don't live with you, about how many of them live within an hour's drive of where you live now?",
+   "options_pew_order": [
+    "All or most",
+    "Some",
+    "Only a few",
+    "None",
+    "I don't have extended family"
+   ],
+   "pew_dist": [
+    0.3331285831285831,
+    0.3441850941850942,
+    0.3104013104013104,
+    0.0,
+    0.012285012285012284
+   ],
+   "pew_entropy_normalized": 0.7148239974618429
+  },
+  {
+   "key": "GAP21Q15_a_W82",
+   "wave": "W82",
+   "question": "Please compare the US to other developed nations in a few different areas. In each instance, how does the US compare? Healthcare system",
+   "options_pew_order": [
+    "The best",
+    "Above average",
+    "Average",
+    "Below average",
+    "The worst"
+   ],
+   "pew_dist": [
+    0.06581494386372436,
+    0.23693379790940766,
+    0.2981029810298103,
+    0.32713898567557104,
+    0.07200929152148665
+   ],
+   "pew_entropy_normalized": 0.8922636012851847
+  },
+  {
+   "key": "GAP21Q15_b_W82",
+   "wave": "W82",
+   "question": "Please compare the US to other developed nations in a few different areas. In each instance, how does the US compare? Colleges and universities",
+   "options_pew_order": [
+    "The best",
+    "Above average",
+    "Average",
+    "Below average",
+    "The worst"
+   ],
+   "pew_dist": [
+    0.15027110766847404,
+    0.36212238574748257,
+    0.33501161890007747,
+    0.12742060418280401,
+    0.02517428350116189
+   ],
+   "pew_entropy_normalized": 0.8538510912577898
+  },
+  {
+   "key": "GAP21Q15_c_W82",
+   "wave": "W82",
+   "question": "Please compare the US to other developed nations in a few different areas. In each instance, how does the US compare? Standard of living",
+   "options_pew_order": [
+    "The best",
+    "Above average",
+    "Average",
+    "Below average",
+    "The worst"
+   ],
+   "pew_dist": [
+    0.12374323279195669,
+    0.41105955143078116,
+    0.3066511987625677,
+    0.14153132250580047,
+    0.017014694508894045
+   ],
+   "pew_entropy_normalized": 0.8279417457219748
+  },
+  {
+   "key": "GAP21Q15_d_W82",
+   "wave": "W82",
+   "question": "Please compare the US to other developed nations in a few different areas. In each instance, how does the US compare? Military",
+   "options_pew_order": [
+    "The best",
+    "Above average",
+    "Average",
+    "Below average",
+    "The worst"
+   ],
+   "pew_dist": [
+    0.45843045843045843,
+    0.36363636363636365,
+    0.1522921522921523,
+    0.021756021756021756,
+    0.003885003885003885
+   ],
+   "pew_entropy_normalized": 0.6939419151324957
+  },
+  {
+   "key": "GAP21Q15_e_W82",
+   "wave": "W82",
+   "question": "Please compare the US to other developed nations in a few different areas. In each instance, how does the US compare? Technological achievements",
+   "options_pew_order": [
+    "The best",
+    "Above average",
+    "Average",
+    "Below average",
+    "The worst"
+   ],
+   "pew_dist": [
+    0.168343653250774,
+    0.5,
+    0.27321981424148606,
+    0.053405572755417956,
+    0.005030959752321981
+   ],
+   "pew_entropy_normalized": 0.735729380495081
+  },
+  {
+   "key": "GAP21Q15_f_W82",
+   "wave": "W82",
+   "question": "Please compare the US to other developed nations in a few different areas. In each instance, how does the US compare? Entertainment, including movies, music and television",
+   "options_pew_order": [
+    "The best",
+    "Above average",
+    "Average",
+    "Below average",
+    "The worst"
+   ],
+   "pew_dist": [
+    0.3009331259720062,
+    0.3973561430793157,
+    0.23522550544323484,
+    0.04354587869362364,
+    0.022939346811819597
+   ],
+   "pew_entropy_normalized": 0.8025127125743906
+  },
+  {
+   "key": "MADEUPSMCLICK_W45",
+   "wave": "W45",
+   "question": "When you see a news story on social media that you think is made-up, how often do you click on the link to that story?",
+   "options_pew_order": [
+    "Often",
+    "Sometimes",
+    "Hardly ever",
+    "Never",
+    "I don't see these types of stories on social media"
+   ],
+   "pew_dist": [
+    0.049187527448397016,
+    0.26570048309178745,
+    0.3708827404479578,
+    0.22112428634167763,
+    0.09310496267018006
+   ],
+   "pew_entropy_normalized": 0.8840964465567805
+  },
+  {
+   "key": "NEIGHINTERA_W32",
+   "wave": "W32",
+   "question": "In general, how often, if ever, would you say you have face-to-face conversations with any of your neighbors",
+   "options_pew_order": [
+    "Every day",
+    "Several times a week",
+    "About once a week",
+    "About once a month",
+    "Less than once a month"
+   ],
+   "pew_dist": [
+    0.0592899621553433,
+    0.22454496305640656,
+    0.2760857812218418,
+    0.22868985402775274,
+    0.2113894395386556
+   ],
+   "pew_entropy_normalized": 0.9470152656345043
+  },
+  {
+   "key": "NEIGHINTERB_W32",
+   "wave": "W32",
+   "question": "In general, how often, if ever, would you say you talk on the phone with any of your neighbors",
+   "options_pew_order": [
+    "Every day",
+    "Several times a week",
+    "About once a week",
+    "About once a month",
+    "Less than once a month"
+   ],
+   "pew_dist": [
+    0.031287970838396115,
+    0.11786148238153099,
+    0.1743620899149453,
+    0.1852976913730255,
+    0.49119076549210205
+   ],
+   "pew_entropy_normalized": 0.8242200999369056
+  },
+  {
+   "key": "NEIGHINTERC_W32",
+   "wave": "W32",
+   "question": "In general, how often, if ever, would you say you exchange emails or text messages with any of your neighbors",
+   "options_pew_order": [
+    "Every day",
+    "Several times a week",
+    "About once a week",
+    "About once a month",
+    "Less than once a month"
+   ],
+   "pew_dist": [
+    0.03961703532518983,
+    0.15516672169032683,
+    0.1868603499504787,
+    0.20964014526246286,
+    0.40871574777154174
+   ],
+   "pew_entropy_normalized": 0.8845842374403372
+  },
+  {
+   "key": "NEIGHINTERD_W32",
+   "wave": "W32",
+   "question": "In general, how often, if ever, would you say you have parties or get-togethers with any of your neighbors",
+   "options_pew_order": [
+    "Every day",
+    "Several times a week",
+    "About once a week",
+    "About once a month",
+    "Less than once a month"
+   ],
+   "pew_dist": [
+    0.007345225603357817,
+    0.026232948583420776,
+    0.07904861839804127,
+    0.18607904861839805,
+    0.7012941587967821
+   ],
+   "pew_entropy_normalized": 0.5554404068157708
+  },
+  {
+   "key": "NEIGHSAMEA_W32",
+   "wave": "W32",
+   "question": "As far as you know, how many of your neighbors are the same race or ethnicity as you",
+   "options_pew_order": [
+    "All of them",
+    "Most of them",
+    "About half",
+    "Only some of them",
+    "None of them"
+   ],
+   "pew_dist": [
+    0.18164251207729468,
+    0.46618357487922707,
+    0.1497584541062802,
+    0.15475040257648953,
+    0.04766505636070854
+   ],
+   "pew_entropy_normalized": 0.8597958115414127
+  },
+  {
+   "key": "NEIGHSAMEB_W32",
+   "wave": "W32",
+   "question": "As far as you know, how many of your neighbors are the same social class as you",
+   "options_pew_order": [
+    "All of them",
+    "Most of them",
+    "About half",
+    "Only some of them",
+    "None of them"
+   ],
+   "pew_dist": [
+    0.07869918699186992,
+    0.4943089430894309,
+    0.19528455284552845,
+    0.19203252032520327,
+    0.03967479674796748
+   ],
+   "pew_entropy_normalized": 0.8153227303849041
+  },
+  {
+   "key": "NEIGHSAMEC_W32",
+   "wave": "W32",
+   "question": "As far as you know, how many of your neighbors have the same political views as you",
+   "options_pew_order": [
+    "All of them",
+    "Most of them",
+    "About half",
+    "Only some of them",
+    "None of them"
+   ],
+   "pew_dist": [
+    0.015538847117794486,
+    0.2509607351712615,
+    0.3263157894736842,
+    0.3284878863826232,
+    0.0786967418546366
+   ],
+   "pew_entropy_normalized": 0.8343539066334568
+  },
+  {
+   "key": "NEWSPREFV2_W45",
+   "wave": "W45",
+   "question": "Which of the following would you say you prefer for getting news?",
+   "options_pew_order": [
+    "A print newspaper",
+    "Radio",
+    "Television",
+    "A social media site (such as Facebook, Twitter or Snapchat)",
+    "A news website or app"
+   ],
+   "pew_dist": [
+    0.08992628992628993,
+    0.08746928746928746,
+    0.4018018018018018,
+    0.104995904995905,
+    0.3158067158067158
+   ],
+   "pew_entropy_normalized": 0.867842616683985
+  },
+  {
+   "key": "PWMAN2_W49",
+   "wave": "W49",
+   "question": "What is the main reason you do not use a password manager?",
+   "options_pew_order": [
+    "Don't know what that is",
+    "My passwords are secure enough",
+    "Don't need it",
+    "Too expensive",
+    "Too complicated"
+   ],
+   "pew_dist": [
+    0.3829169087739686,
+    0.1167925624636839,
+    0.368390470656595,
+    0.031958163858221963,
+    0.0999418942475305
+   ],
+   "pew_entropy_normalized": 0.824185707601905
+  },
+  {
+   "key": "RACESURV47e_W43",
+   "wave": "W43",
+   "question": "For each, please indicate if you, personally, think it is acceptable. A person wearing traditional dress from a country or culture other than their own as part of a Halloween costume",
+   "options_pew_order": [
+    "Always acceptable",
+    "Sometimes acceptable",
+    "Rarely acceptable",
+    "Never acceptable",
+    "Not sure"
+   ],
+   "pew_dist": [
+    0.22922374429223744,
+    0.3318112633181126,
+    0.14124809741248098,
+    0.16529680365296803,
+    0.1324200913242009
+   ],
+   "pew_entropy_normalized": 0.9602273057694928
+  },
+  {
+   "key": "RACESURV47f_W43",
+   "wave": "W43",
+   "question": "For each, please indicate if you, personally, think it is acceptable. A white person using makeup to darken their skin so they appear to be a different race as part of a Halloween costume",
+   "options_pew_order": [
+    "Always acceptable",
+    "Sometimes acceptable",
+    "Rarely acceptable",
+    "Never acceptable",
+    "Not sure"
+   ],
+   "pew_dist": [
+    0.11895345299665348,
+    0.18101612412534226,
+    0.1524186188013386,
+    0.43595984180103436,
+    0.11165196227563128
+   ],
+   "pew_entropy_normalized": 0.9047124926134709
+  },
+  {
+   "key": "RACESURV5a_W43",
+   "wave": "W43",
+   "question": "Overall, how does being white affect people's ability to get ahead in our country these days?",
+   "options_pew_order": [
+    "Helps a lot",
+    "Helps a little",
+    "Hurts a little",
+    "Hurts a lot",
+    "Neither helps nor hurts"
+   ],
+   "pew_dist": [
+    0.4633515815085158,
+    0.19114963503649635,
+    0.06265206812652069,
+    0.035583941605839414,
+    0.24726277372262773
+   ],
+   "pew_entropy_normalized": 0.8142579128493037
+  },
+  {
+   "key": "RACESURV5c_W43",
+   "wave": "W43",
+   "question": "Overall, how does being Hispanic affect people's ability to get ahead in our country these days?",
+   "options_pew_order": [
+    "Helps a lot",
+    "Helps a little",
+    "Hurts a little",
+    "Hurts a lot",
+    "Neither helps nor hurts"
+   ],
+   "pew_dist": [
+    0.05751673767498478,
+    0.11320754716981132,
+    0.3600121728545344,
+    0.19430919050517345,
+    0.27495435179549604
+   ],
+   "pew_entropy_normalized": 0.9021878882185733
+  },
+  {
+   "key": "RACESURV5d_W43",
+   "wave": "W43",
+   "question": "Overall, how does being Asian affect people's ability to get ahead in our country these days?",
+   "options_pew_order": [
+    "Helps a lot",
+    "Helps a little",
+    "Hurts a little",
+    "Hurts a lot",
+    "Neither helps nor hurts"
+   ],
+   "pew_dist": [
+    0.09434537418076512,
+    0.27023319615912206,
+    0.1867093430879439,
+    0.03475080018289895,
+    0.41396128638926993
+   ],
+   "pew_entropy_normalized": 0.8521682244309428
+  },
+  {
+   "key": "RACESURV5e_W43",
+   "wave": "W43",
+   "question": "Overall, how does being Native American affect people's ability to get ahead in our country these days?",
+   "options_pew_order": [
+    "Helps a lot",
+    "Helps a little",
+    "Hurts a little",
+    "Hurts a lot",
+    "Neither helps nor hurts"
+   ],
+   "pew_dist": [
+    0.06453576864535769,
+    0.1512937595129376,
+    0.2447488584474886,
+    0.182648401826484,
+    0.3567732115677321
+   ],
+   "pew_entropy_normalized": 0.9228828912704456
+  },
+  {
+   "key": "RACESURV5f_W43",
+   "wave": "W43",
+   "question": "Overall, how does being Jewish affect people's ability to get ahead in our country these days?",
+   "options_pew_order": [
+    "Helps a lot",
+    "Helps a little",
+    "Hurts a little",
+    "Hurts a lot",
+    "Neither helps nor hurts"
+   ],
+   "pew_dist": [
+    0.10836385836385837,
+    0.1623931623931624,
+    0.17032967032967034,
+    0.04120879120879121,
+    0.5177045177045178
+   ],
+   "pew_entropy_normalized": 0.8137856660352552
+  },
+  {
+   "key": "RACESURV5g_W43",
+   "wave": "W43",
+   "question": "Overall, how does being Muslim affect people's ability to get ahead in our country these days?",
+   "options_pew_order": [
+    "Helps a lot",
+    "Helps a little",
+    "Hurts a little",
+    "Hurts a lot",
+    "Neither helps nor hurts"
+   ],
+   "pew_dist": [
+    0.030755176613885507,
+    0.04354445797807552,
+    0.321863580998782,
+    0.3447015834348356,
+    0.25913520097442144
+   ],
+   "pew_entropy_normalized": 0.8235743431089331
+  },
+  {
+   "key": "RACESURV5h_W43",
+   "wave": "W43",
+   "question": "Overall, how does being an evangelical Christian affect people's ability to get ahead in our country these days?",
+   "options_pew_order": [
+    "Helps a lot",
+    "Helps a little",
+    "Hurts a little",
+    "Hurts a lot",
+    "Neither helps nor hurts"
+   ],
+   "pew_dist": [
+    0.12640877246420956,
+    0.19433445019798964,
+    0.10417301248857752,
+    0.0487359122753579,
+    0.5263478525738654
+   ],
+   "pew_entropy_normalized": 0.8080206919721385
+  },
+  {
+   "key": "RACESURV5i_W43",
+   "wave": "W43",
+   "question": "Overall, how does being a man affect people's ability to get ahead in our country these days?",
+   "options_pew_order": [
+    "Helps a lot",
+    "Helps a little",
+    "Hurts a little",
+    "Hurts a lot",
+    "Neither helps nor hurts"
+   ],
+   "pew_dist": [
+    0.4184634072274522,
+    0.26632250227755844,
+    0.06225326450045551,
+    0.02459763133920437,
+    0.22836319465532948
+   ],
+   "pew_entropy_normalized": 0.8190094817335123
+  },
+  {
+   "key": "RACESURV5j_W43",
+   "wave": "W43",
+   "question": "Overall, how does being a woman affect people's ability to get ahead in our country these days?",
+   "options_pew_order": [
+    "Helps a lot",
+    "Helps a little",
+    "Hurts a little",
+    "Hurts a lot",
+    "Neither helps nor hurts"
+   ],
+   "pew_dist": [
+    0.07145028884159318,
+    0.15171784737002128,
+    0.4262693827911219,
+    0.12161751292186075,
+    0.22894496807540285
+   ],
+   "pew_entropy_normalized": 0.8896722993243887
+  },
+  {
+   "key": "RACESURV5k_W43",
+   "wave": "W43",
+   "question": "Overall, how does being poor affect people's ability to get ahead in our country these days?",
+   "options_pew_order": [
+    "Helps a lot",
+    "Helps a little",
+    "Hurts a little",
+    "Hurts a lot",
+    "Neither helps nor hurts"
+   ],
+   "pew_dist": [
+    0.018793573810245528,
+    0.023340406183692028,
+    0.18945134889360413,
+    0.6877841770233404,
+    0.08063049408911792
+   ],
+   "pew_entropy_normalized": 0.5828188558007118
+  },
+  {
+   "key": "RACESURV5l_W43",
+   "wave": "W43",
+   "question": "Overall, how does being wealthy affect people's ability to get ahead in our country these days?",
+   "options_pew_order": [
+    "Helps a lot",
+    "Helps a little",
+    "Hurts a little",
+    "Hurts a lot",
+    "Neither helps nor hurts"
+   ],
+   "pew_dist": [
+    0.8072837632776935,
+    0.09408194233687406,
+    0.014871016691957511,
+    0.01881638846737481,
+    0.06494688922610015
+   ],
+   "pew_entropy_normalized": 0.44121712773699845
+  },
+  {
+   "key": "RACESURV9_W43",
+   "wave": "W43",
+   "question": "When race or race relations comes up in your conversations with family and friends, is it",
+   "options_pew_order": [
+    "Always with people who are the same race as you",
+    "Mostly with people who are the same race as you",
+    "Mostly with people who are not the same race as you",
+    "Always with people who are not the same race as you",
+    "Both about equally"
+   ],
+   "pew_dist": [
+    0.12557271338876633,
+    0.4221958255557441,
+    0.12591209910062787,
+    0.02647208552519939,
+    0.2998472764296623
+   ],
+   "pew_entropy_normalized": 0.8343350557460991
+  },
+  {
+   "key": "RESTRICTWHO_W45",
+   "wave": "W45",
+   "question": "Who do you think has the most responsibility to reduce the amount of made-up news and information?",
+   "options_pew_order": [
+    "The government",
+    "Technology companies",
+    "The public",
+    "The news media",
+    "None of these"
+   ],
+   "pew_dist": [
+    0.12199539018768521,
+    0.09614751399407309,
+    0.20217319723411262,
+    0.5393480408297662,
+    0.04033585775436286
+   ],
+   "pew_entropy_normalized": 0.7875451858708926
+  },
+  {
+   "key": "ROMRELDUR_W50",
+   "wave": "W50",
+   "question": "How long have you been in your current romantic relationship?",
+   "options_pew_order": [
+    "Less than 3 months",
+    "3 months to less than 6 months",
+    "6 months to less than 1 year",
+    "1 year to less than 3 years",
+    "3 years to less than 5 years"
+   ],
+   "pew_dist": [
+    0.12362030905077263,
+    0.11479028697571744,
+    0.16556291390728478,
+    0.39514348785871967,
+    0.20088300220750552
+   ],
+   "pew_entropy_normalized": 0.9282618859019042
+  },
+  {
+   "key": "SMSHARE_W45",
+   "wave": "W45",
+   "question": "When you share a news story on social media, how much do you think it impacts the story's overall reach to the public?",
+   "options_pew_order": [
+    "A lot",
+    "Some",
+    "Not much",
+    "Not at all",
+    "I don't share news stories on social media"
+   ],
+   "pew_dist": [
+    0.07827230870423153,
+    0.2797632098224074,
+    0.24402543301907476,
+    0.03639552729664547,
+    0.3615435211576409
+   ],
+   "pew_entropy_normalized": 0.8626471659792566
+  },
+  {
+   "key": "SOCIETY_JBCLL_W92",
+   "wave": "W92",
+   "question": "Do you think good-paying jobs requiring a college degree more often than they used to is generally good or bad for our society?",
+   "options_pew_order": [
+    "Very good for society",
+    "Somewhat good for society",
+    "Neither good nor bad for society",
+    "Somewhat bad for society",
+    "Very bad for society"
+   ],
+   "pew_dist": [
+    0.08861508132084771,
+    0.24337111877772302,
+    0.29788072942336125,
+    0.29719073435189747,
+    0.07294233612617053
+   ],
+   "pew_entropy_normalized": 0.9139872519626028
+  },
+  {
+   "key": "SOCIETY_RHIST_W92",
+   "wave": "W92",
+   "question": "Do you think increased public attention to the history of slavery and racism in America is generally good or bad for our society?",
+   "options_pew_order": [
+    "Very good for society",
+    "Somewhat good for society",
+    "Neither good nor bad for society",
+    "Somewhat bad for society",
+    "Very bad for society"
+   ],
+   "pew_dist": [
+    0.3104910274107671,
+    0.2268783277460067,
+    0.19305856832971802,
+    0.15066061920725696,
+    0.11891145730625123
+   ],
+   "pew_entropy_normalized": 0.9665425102977752
+  },
+  {
+   "key": "SOCIETY_WHT_W92",
+   "wave": "W92",
+   "question": "Do you think white people declining as a share of the U.S. population is generally good or bad for our society?",
+   "options_pew_order": [
+    "Very good for society",
+    "Somewhat good for society",
+    "Neither good nor bad for society",
+    "Somewhat bad for society",
+    "Very bad for society"
+   ],
+   "pew_dist": [
+    0.06305593990907293,
+    0.07817750543585689,
+    0.64657046847203,
+    0.12680371614943664,
+    0.08539237003360348
+   ],
+   "pew_entropy_normalized": 0.7005244145450759
+  },
+  {
+   "key": "TRACKCO1a_W49",
+   "wave": "W49",
+   "question": "As far as you know, how much of what you do online or on your cellphone is being tracked by advertisers, technology firms or other companies?",
+   "options_pew_order": [
+    "All or almost all of it",
+    "Most of it",
+    "Some of it",
+    "Very little of it",
+    "None of it"
+   ],
+   "pew_dist": [
+    0.4138093001409112,
+    0.330201972757163,
+    0.17895725692813527,
+    0.04133395960544857,
+    0.035697510568341945
+   ],
+   "pew_entropy_normalized": 0.80126212627616
+  },
+  {
+   "key": "TRACKCO1b_W49",
+   "wave": "W49",
+   "question": "As far as you know, how much of what you do offline like where you are or who you are talking to is being tracked by advertisers, technology firms or other companies?",
+   "options_pew_order": [
+    "All or almost all of it",
+    "Most of it",
+    "Some of it",
+    "Very little of it",
+    "None of it"
+   ],
+   "pew_dist": [
+    0.11137218045112782,
+    0.19407894736842105,
+    0.3956766917293233,
+    0.19830827067669174,
+    0.10056390977443609
+   ],
+   "pew_entropy_normalized": 0.9204048567229861
+  },
+  {
+   "key": "TRACKGOV1a_W49",
+   "wave": "W49",
+   "question": "As far as you know, how much of what you do online or on your cellphone is being tracked by the government?",
+   "options_pew_order": [
+    "All or almost all of it",
+    "Most of it",
+    "Some of it",
+    "Very little of it",
+    "None of it"
+   ],
+   "pew_dist": [
+    0.22458628841607564,
+    0.23120567375886525,
+    0.31725768321513004,
+    0.14988179669030732,
+    0.07706855791962175
+   ],
+   "pew_entropy_normalized": 0.9445690311076276
+  },
+  {
+   "key": "TRACKGOV1b_W49",
+   "wave": "W49",
+   "question": "As far as you know, how much of what you do offline like where you are or who you are talking to is being tracked by the government?",
+   "options_pew_order": [
+    "All or almost all of it",
+    "Most of it",
+    "Some of it",
+    "Very little of it",
+    "None of it"
+   ],
+   "pew_dist": [
+    0.09764150943396227,
+    0.12028301886792453,
+    0.33160377358490567,
+    0.2849056603773585,
+    0.16556603773584905
+   ],
+   "pew_entropy_normalized": 0.934123624739413
+  },
+  {
+   "key": "USMILSIZ_W92",
+   "wave": "W92",
+   "question": "Thinking about the size of America's military, do you think it should be",
+   "options_pew_order": [
+    "Reduced a great deal",
+    "Reduced somewhat",
+    "Kept about as is",
+    "Increased somewhat",
+    "Increased a great deal"
+   ],
+   "pew_dist": [
+    0.06100347739692002,
+    0.13303527074018878,
+    0.4299056135121709,
+    0.26070541480377546,
+    0.11535022354694485
+   ],
+   "pew_entropy_normalized": 0.8708028745789401
+  },
+  {
+   "key": "WORRY2a_W54",
+   "wave": "W54",
+   "question": "How often, if ever, do you worry about the amount of debt you have?",
+   "options_pew_order": [
+    "Every day",
+    "Almost every day",
+    "Sometimes",
+    "Rarely",
+    "Never"
+   ],
+   "pew_dist": [
+    0.21701566847269,
+    0.15287743447063992,
+    0.2666569043783863,
+    0.17835700688241324,
+    0.18509298579587055
+   ],
+   "pew_entropy_normalized": 0.9884538378277968
+  },
+  {
+   "key": "WORRY2b_W54",
+   "wave": "W54",
+   "question": "How often, if ever, do you worry about losing your job?",
+   "options_pew_order": [
+    "Every day",
+    "Almost every day",
+    "Sometimes",
+    "Rarely",
+    "Never"
+   ],
+   "pew_dist": [
+    0.100140383715489,
+    0.07814693495554516,
+    0.28731867103416003,
+    0.30978006551240056,
+    0.22461394478240523
+   ],
+   "pew_entropy_normalized": 0.9235803169795762
+  },
+  {
+   "key": "WORRY2c_W54",
+   "wave": "W54",
+   "question": "How often, if ever, do you worry about paying your bills?",
+   "options_pew_order": [
+    "Every day",
+    "Almost every day",
+    "Sometimes",
+    "Rarely",
+    "Never"
+   ],
+   "pew_dist": [
+    0.20301081555100847,
+    0.14440222157263957,
+    0.2870505700087694,
+    0.21923414206372405,
+    0.14630225080385853
+   ],
+   "pew_entropy_normalized": 0.9788044159722219
+  },
+  {
+   "key": "WORRY2d_W54",
+   "wave": "W54",
+   "question": "How often, if ever, do you worry about the cost of health care for you and your family?",
+   "options_pew_order": [
+    "Every day",
+    "Almost every day",
+    "Sometimes",
+    "Rarely",
+    "Never"
+   ],
+   "pew_dist": [
+    0.19078273591806877,
+    0.16356986100950988,
+    0.378054133138259,
+    0.1745427944403804,
+    0.09305047549378201
+   ],
+   "pew_entropy_normalized": 0.9354684835175011
+  },
+  {
+   "key": "WORRY2e_W54",
+   "wave": "W54",
+   "question": "How often, if ever, do you worry about being able to save enough for your retirement?",
+   "options_pew_order": [
+    "Every day",
+    "Almost every day",
+    "Sometimes",
+    "Rarely",
+    "Never"
+   ],
+   "pew_dist": [
+    0.23736328702335205,
+    0.1854862548034289,
+    0.3347620455217263,
+    0.13331362695832102,
+    0.10907478569317174
+   ],
+   "pew_entropy_normalized": 0.9509684823716283
+  }
+ ],
+ "waves_scanned": [
+  "W26",
+  "W27",
+  "W34",
+  "W42",
+  "W43",
+  "W50",
+  "W54",
+  "W92",
+  "W36",
+  "W41",
+  "W49",
+  "W82",
+  "W45",
+  "W32"
+ ],
+ "waves_scanned_note": "waves scanned for candidate items; a scanned wave can contribute zero items with usable 5-point ground truth"
+}

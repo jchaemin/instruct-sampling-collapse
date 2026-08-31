@@ -1,0 +1,30 @@
+{
+  "tasks": {
+    "uniform_digit": {
+      "base_user_prompt": "Pick a random digit from 1 to 5 uniformly at random. Reply with just the digit.",
+      "target_dist": [0.2, 0.2, 0.2, 0.2, 0.2],
+      "support": [1, 2, 3, 4, 5],
+      "baseline_behavior_str": "digit 1: 0.5%, digit 2: 0.5%, digit 3: 94.5%, digit 4: 5%, digit 5: 0%",
+      "mode_label": "digit 3",
+      "mode_pct": "94.5%",
+      "target_phrase": "uniformly-random digit so that across many responses you give each digit 1-5 about 20% of the time",
+      "target_outcome_short": "uniform random digit (each digit 1-5 about 20% of the time)",
+      "support_size": 5
+    },
+    "coin_flip": {
+      "base_user_prompt": "Flip a fair coin. Report heads or tails. Reply with just the word.",
+      "target_dist": [0.5, 0.5],
+      "support": ["heads", "tails"],
+      "baseline_behavior_str": "heads: 97.5%, tails: 2.5%",
+      "mode_label": "heads",
+      "mode_pct": "97.5%",
+      "target_phrase": "fair coin outcome so that across many responses you give heads about 50% of the time and tails about 50% of the time",
+      "target_outcome_short": "fair coin outcome (heads about 50%, tails about 50%)",
+      "support_size": 2
+    }
+  },
+  "icl_examples": {
+    "uniform_digit": [4, 1, 5, 2, 3, 4, 5, 1, 2, 3, 5, 1, 4, 2, 3, 4, 1, 5, 3, 2],
+    "coin_flip": ["heads", "tails", "heads", "tails", "tails", "heads", "tails", "heads", "heads", "tails", "tails", "heads", "tails", "heads", "heads", "tails", "tails", "heads", "tails", "heads"]
+  }
+}

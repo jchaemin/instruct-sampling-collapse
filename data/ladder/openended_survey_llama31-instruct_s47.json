@@ -1,0 +1,152 @@
+[
+ {
+  "model": "llama31-instruct",
+  "task": "important_problem",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 149,
+  "top1": "Inflation And Economic Instability",
+  "top1_share": 0.04,
+  "entropy_nats": 4.812
+ },
+ {
+  "model": "llama31-instruct",
+  "task": "important_problem",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 151,
+  "top1": "Inflation And Economic Instability",
+  "top1_share": 0.04,
+  "entropy_nats": 4.834
+ },
+ {
+  "model": "llama31-instruct",
+  "task": "important_problem",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 155,
+  "top1": "Climate Change And Environmental Degradation",
+  "top1_share": 0.125,
+  "entropy_nats": 4.702
+ },
+ {
+  "model": "llama31-instruct",
+  "task": "news_source",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 91,
+  "top1": "I Dont Rely On A Single News Outlet",
+  "top1_share": 0.22,
+  "entropy_nats": 3.685
+ },
+ {
+  "model": "llama31-instruct",
+  "task": "news_source",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 93,
+  "top1": "I Dont Rely On A Single News Outlet",
+  "top1_share": 0.205,
+  "entropy_nats": 3.76
+ },
+ {
+  "model": "llama31-instruct",
+  "task": "news_source",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 124,
+  "top1": "Bbc",
+  "top1_share": 0.14,
+  "entropy_nats": 4.262
+ },
+ {
+  "model": "llama31-instruct",
+  "task": "policy_priority",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 105,
+  "top1": "Addressing Climate Change Mitigation",
+  "top1_share": 0.125,
+  "entropy_nats": 4.038
+ },
+ {
+  "model": "llama31-instruct",
+  "task": "policy_priority",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 104,
+  "top1": "Addressing Climate Change Mitigation",
+  "top1_share": 0.14,
+  "entropy_nats": 3.965
+ },
+ {
+  "model": "llama31-instruct",
+  "task": "policy_priority",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 159,
+  "top1": "Climate Change Mitigation",
+  "top1_share": 0.065,
+  "entropy_nats": 4.863
+ },
+ {
+  "model": "llama31-instruct",
+  "task": "respondent_occupation",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 94,
+  "top1": "Customer Service Representative",
+  "top1_share": 0.145,
+  "entropy_nats": 3.929
+ },
+ {
+  "model": "llama31-instruct",
+  "task": "respondent_occupation",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 94,
+  "top1": "Customer Service Representative",
+  "top1_share": 0.13,
+  "entropy_nats": 3.952
+ },
+ {
+  "model": "llama31-instruct",
+  "task": "respondent_occupation",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 120,
+  "top1": "Data Analyst",
+  "top1_share": 0.095,
+  "entropy_nats": 4.398
+ },
+ {
+  "model": "llama31-instruct",
+  "task": "respondent_city",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 57,
+  "top1": "Omaha",
+  "top1_share": 0.175,
+  "entropy_nats": 3.275
+ },
+ {
+  "model": "llama31-instruct",
+  "task": "respondent_city",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 60,
+  "top1": "Chicago",
+  "top1_share": 0.17,
+  "entropy_nats": 3.383
+ },
+ {
+  "model": "llama31-instruct",
+  "task": "respondent_city",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 83,
+  "top1": "Chicago",
+  "top1_share": 0.1,
+  "entropy_nats": 3.775
+ }
+]

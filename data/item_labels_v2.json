@@ -1,0 +1,252 @@
+{
+  "AGEMAJ_W41": {
+    "domain": "VALUES",
+    "wave": "W41",
+    "question_excerpt": "According to the U.S. Census Bureau, by the year 2050, the number of people in the population who ar"
+  },
+  "CLASS_W32": {
+    "domain": "VALUES",
+    "wave": "W32",
+    "question_excerpt": "If you were asked to use one of these commonly used names for the social classes, which would you sa"
+  },
+  "COMMYRS_W32": {
+    "domain": "FACTS",
+    "wave": "W32",
+    "question_excerpt": "About how many years have you lived in your local community?"
+  },
+  "FAMNEAR_W32": {
+    "domain": "FACTS",
+    "wave": "W32",
+    "question_excerpt": "Thinking about members of your extended family who don't live with you, about how many of them live "
+  },
+  "GAP21Q15_a_W82": {
+    "domain": "VALUES",
+    "wave": "W82",
+    "question_excerpt": "Please compare the US to other developed nations in a few different areas. In each instance, how doe"
+  },
+  "GAP21Q15_b_W82": {
+    "domain": "VALUES",
+    "wave": "W82",
+    "question_excerpt": "Please compare the US to other developed nations in a few different areas. In each instance, how doe"
+  },
+  "GAP21Q15_c_W82": {
+    "domain": "VALUES",
+    "wave": "W82",
+    "question_excerpt": "Please compare the US to other developed nations in a few different areas. In each instance, how doe"
+  },
+  "GAP21Q15_d_W82": {
+    "domain": "VALUES",
+    "wave": "W82",
+    "question_excerpt": "Please compare the US to other developed nations in a few different areas. In each instance, how doe"
+  },
+  "GAP21Q15_e_W82": {
+    "domain": "VALUES",
+    "wave": "W82",
+    "question_excerpt": "Please compare the US to other developed nations in a few different areas. In each instance, how doe"
+  },
+  "GAP21Q15_f_W82": {
+    "domain": "VALUES",
+    "wave": "W82",
+    "question_excerpt": "Please compare the US to other developed nations in a few different areas. In each instance, how doe"
+  },
+  "MADEUPSMCLICK_W45": {
+    "domain": "FACTS",
+    "wave": "W45",
+    "question_excerpt": "When you see a news story on social media that you think is made-up, how often do you click on the l"
+  },
+  "NEIGHINTERA_W32": {
+    "domain": "FACTS",
+    "wave": "W32",
+    "question_excerpt": "In general, how often, if ever, would you say you have face-to-face conversations with any of your n"
+  },
+  "NEIGHINTERB_W32": {
+    "domain": "FACTS",
+    "wave": "W32",
+    "question_excerpt": "In general, how often, if ever, would you say you talk on the phone with any of your neighbors"
+  },
+  "NEIGHINTERC_W32": {
+    "domain": "FACTS",
+    "wave": "W32",
+    "question_excerpt": "In general, how often, if ever, would you say you exchange emails or text messages with any of your "
+  },
+  "NEIGHINTERD_W32": {
+    "domain": "FACTS",
+    "wave": "W32",
+    "question_excerpt": "In general, how often, if ever, would you say you have parties or get-togethers with any of your nei"
+  },
+  "NEIGHSAMEA_W32": {
+    "domain": "FACTS",
+    "wave": "W32",
+    "question_excerpt": "As far as you know, how many of your neighbors are the same race or ethnicity as you"
+  },
+  "NEIGHSAMEB_W32": {
+    "domain": "FACTS",
+    "wave": "W32",
+    "question_excerpt": "As far as you know, how many of your neighbors are the same social class as you"
+  },
+  "NEIGHSAMEC_W32": {
+    "domain": "FACTS",
+    "wave": "W32",
+    "question_excerpt": "As far as you know, how many of your neighbors have the same political views as you"
+  },
+  "NEWSPREFV2_W45": {
+    "domain": "VALUES",
+    "wave": "W45",
+    "question_excerpt": "Which of the following would you say you prefer for getting news?"
+  },
+  "PWMAN2_W49": {
+    "domain": "VALUES",
+    "wave": "W49",
+    "question_excerpt": "What is the main reason you do not use a password manager?"
+  },
+  "RACESURV47e_W43": {
+    "domain": "VALUES",
+    "wave": "W43",
+    "question_excerpt": "For each, please indicate if you, personally, think it is acceptable. A person wearing traditional d"
+  },
+  "RACESURV47f_W43": {
+    "domain": "VALUES",
+    "wave": "W43",
+    "question_excerpt": "For each, please indicate if you, personally, think it is acceptable. A white person using makeup to"
+  },
+  "RACESURV5a_W43": {
+    "domain": "VALUES",
+    "wave": "W43",
+    "question_excerpt": "Overall, how does being white affect people's ability to get ahead in our country these days?"
+  },
+  "RACESURV5c_W43": {
+    "domain": "VALUES",
+    "wave": "W43",
+    "question_excerpt": "Overall, how does being Hispanic affect people's ability to get ahead in our country these days?"
+  },
+  "RACESURV5d_W43": {
+    "domain": "VALUES",
+    "wave": "W43",
+    "question_excerpt": "Overall, how does being Asian affect people's ability to get ahead in our country these days?"
+  },
+  "RACESURV5e_W43": {
+    "domain": "VALUES",
+    "wave": "W43",
+    "question_excerpt": "Overall, how does being Native American affect people's ability to get ahead in our country these da"
+  },
+  "RACESURV5f_W43": {
+    "domain": "VALUES",
+    "wave": "W43",
+    "question_excerpt": "Overall, how does being Jewish affect people's ability to get ahead in our country these days?"
+  },
+  "RACESURV5g_W43": {
+    "domain": "VALUES",
+    "wave": "W43",
+    "question_excerpt": "Overall, how does being Muslim affect people's ability to get ahead in our country these days?"
+  },
+  "RACESURV5h_W43": {
+    "domain": "VALUES",
+    "wave": "W43",
+    "question_excerpt": "Overall, how does being an evangelical Christian affect people's ability to get ahead in our country"
+  },
+  "RACESURV5i_W43": {
+    "domain": "VALUES",
+    "wave": "W43",
+    "question_excerpt": "Overall, how does being a man affect people's ability to get ahead in our country these days?"
+  },
+  "RACESURV5j_W43": {
+    "domain": "VALUES",
+    "wave": "W43",
+    "question_excerpt": "Overall, how does being a woman affect people's ability to get ahead in our country these days?"
+  },
+  "RACESURV5k_W43": {
+    "domain": "VALUES",
+    "wave": "W43",
+    "question_excerpt": "Overall, how does being poor affect people's ability to get ahead in our country these days?"
+  },
+  "RACESURV5l_W43": {
+    "domain": "VALUES",
+    "wave": "W43",
+    "question_excerpt": "Overall, how does being wealthy affect people's ability to get ahead in our country these days?"
+  },
+  "RACESURV9_W43": {
+    "domain": "VALUES",
+    "wave": "W43",
+    "question_excerpt": "When race or race relations comes up in your conversations with family and friends, is it"
+  },
+  "RESTRICTWHO_W45": {
+    "domain": "VALUES",
+    "wave": "W45",
+    "question_excerpt": "Who do you think has the most responsibility to reduce the amount of made-up news and information?"
+  },
+  "ROMRELDUR_W50": {
+    "domain": "FACTS",
+    "wave": "W50",
+    "question_excerpt": "How long have you been in your current romantic relationship?"
+  },
+  "SMSHARE_W45": {
+    "domain": "FACTS",
+    "wave": "W45",
+    "question_excerpt": "When you share a news story on social media, how much do you think it impacts the story's overall re"
+  },
+  "SOCIETY_JBCLL_W92": {
+    "domain": "VALUES",
+    "wave": "W92",
+    "question_excerpt": "Do you think good-paying jobs requiring a college degree more often than they used to is generally g"
+  },
+  "SOCIETY_RHIST_W92": {
+    "domain": "VALUES",
+    "wave": "W92",
+    "question_excerpt": "Do you think increased public attention to the history of slavery and racism in America is generally"
+  },
+  "SOCIETY_WHT_W92": {
+    "domain": "VALUES",
+    "wave": "W92",
+    "question_excerpt": "Do you think white people declining as a share of the U.S. population is generally good or bad for o"
+  },
+  "TRACKCO1a_W49": {
+    "domain": "FACTS",
+    "wave": "W49",
+    "question_excerpt": "As far as you know, how much of what you do online or on your cellphone is being tracked by advertis"
+  },
+  "TRACKCO1b_W49": {
+    "domain": "FACTS",
+    "wave": "W49",
+    "question_excerpt": "As far as you know, how much of what you do offline like where you are or who you are talking to is "
+  },
+  "TRACKGOV1a_W49": {
+    "domain": "FACTS",
+    "wave": "W49",
+    "question_excerpt": "As far as you know, how much of what you do online or on your cellphone is being tracked by the gove"
+  },
+  "TRACKGOV1b_W49": {
+    "domain": "FACTS",
+    "wave": "W49",
+    "question_excerpt": "As far as you know, how much of what you do offline like where you are or who you are talking to is "
+  },
+  "USMILSIZ_W92": {
+    "domain": "VALUES",
+    "wave": "W92",
+    "question_excerpt": "Thinking about the size of America's military, do you think it should be"
+  },
+  "WORRY2a_W54": {
+    "domain": "FACTS",
+    "wave": "W54",
+    "question_excerpt": "How often, if ever, do you worry about the amount of debt you have?"
+  },
+  "WORRY2b_W54": {
+    "domain": "FACTS",
+    "wave": "W54",
+    "question_excerpt": "How often, if ever, do you worry about losing your job?"
+  },
+  "WORRY2c_W54": {
+    "domain": "FACTS",
+    "wave": "W54",
+    "question_excerpt": "How often, if ever, do you worry about paying your bills?"
+  },
+  "WORRY2d_W54": {
+    "domain": "FACTS",
+    "wave": "W54",
+    "question_excerpt": "How often, if ever, do you worry about the cost of health care for you and your family?"
+  },
+  "WORRY2e_W54": {
+    "domain": "FACTS",
+    "wave": "W54",
+    "question_excerpt": "How often, if ever, do you worry about being able to save enough for your retirement?"
+  }
+}

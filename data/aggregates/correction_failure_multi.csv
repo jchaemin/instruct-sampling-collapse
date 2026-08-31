@@ -1,0 +1,3 @@
+task,baseline_tv,after_correction_tv,improvement,baseline_rollback_pct,after_correction_rollback_pct,improvement_pct_points
+A_uniform,0.7424999999999998,0.495,0.2474999999999998,,,
+B_coin,0.475,0.345,0.13,,,

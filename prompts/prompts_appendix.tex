@@ -1,0 +1,883 @@
+% ============================================================
+% Verbatim prompt appendix, generated directly from the released code.
+% Every string below is copied character-for-character from the scripts
+% listed in prompt_sources.md; templates are shown with {placeholders}
+% exactly as they appear in the code, followed by one fully instantiated
+% example where construction is programmatic.
+% ============================================================
+
+\section*{Verbatim prompt templates}
+
+API experiments use the OpenAI chat format; local-checkpoint experiments apply each model's own chat template (noted per section). The non-Likert benchmark generalizes the A.2/A.3 templates to $k$-option items with a shortened scale-anchored phrasing; its exact builders are in \texttt{silicon/nonlikert.py} (see the source map). Prompts below are annotated
+with their role (\texttt{system} / \texttt{user} / \texttt{assistant}).
+Where a prompt is assembled programmatically we first show the template
+with \texttt{\{placeholders\}} and then one fully instantiated example.
+Prompt text is reproduced character-for-character, with one exception:
+prompts that are a single long line (or one continuous paragraph) in
+the code are soft-wrapped here to fit the page width; explicit
+\verb|\n| line breaks in the real prompts are shown as actual line
+breaks.
+
+% ------------------------------------------------------------
+\subsection*{A.1\quad Demographic persona template (Argyle-style silicon sampling)}
+
+The one-sentence persona template shared, via import, by every
+experiment that samples personas (\texttt{silicon/opinionqa.py}
+\texttt{sample\_personas}). Personas are drawn from the Pew ATP W92 joint
+demographic distribution (seed 42) and rendered with this template:
+
+\begin{verbatim}
+You are a {race} {gender} {age} {educ}, {inc}, who is {party}.
+\end{verbatim}
+
+The slot fillers are fixed mappings from Pew category labels:
+
+\begin{verbatim}
+AGE:    "18-29" -> "in their 20s"
+        "30-49" -> "in their 30s or 40s"
+        "50-64" -> "in their 50s or early 60s"
+        "65+"   -> "in their late 60s or older"
+EDUC:   "H.S. graduate or less" -> "with a high-school education"
+        "Some College"          -> "with some college experience"
+        "College graduate+"     -> "with a college degree or more"
+RACE:   "White non-Hispanic" -> "non-Hispanic white"
+        "Black non-Hispanic" -> "non-Hispanic Black"
+        "Hispanic"           -> "Hispanic"
+        "Asian non-Hispanic" -> "non-Hispanic Asian American"
+        "Other"              -> "of another racial background"
+PARTY:  "Dem/Lean Dem"       -> "Democrat or Democratic-leaning"
+        "Rep/Lean Rep"       -> "Republican or Republican-leaning"
+        "DK/Refused/No lean" -> "politically independent"
+SEX:    "Female" -> "woman"   "Male" -> "man"
+        "In some other way" -> "person"
+INCOME: "Lower income"  -> "in a lower-income household"
+        "Middle income" -> "in a middle-income household"
+        "Upper income"  -> "in an upper-income household"
+\end{verbatim}
+
+Fully instantiated example:
+
+\begin{verbatim}
+You are a non-Hispanic white woman in their 30s or 40s with a college
+degree or more, in a middle-income household, who is Democrat or
+Democratic-leaning.
+\end{verbatim}
+
+% ------------------------------------------------------------
+\subsection*{A.2\quad Argyle baseline prompt, the 100-item expansion run (per-item results)}
+
+Used for the 100-item baseline (100 personas $\times$ 1 call each,
+$T{=}1.0$). The user message template (\texttt{build\_argyle}) is:
+
+\begin{verbatim}
+{phrasing}
+
+Options:
+1. {label shown at position 1}
+2. {label shown at position 2}
+3. {label shown at position 3}
+4. {label shown at position 4}
+5. {label shown at position 5}
+
+Respond with just the number (1-5).
+\end{verbatim}
+
+where \texttt{\{phrasing\}} is the item question under the selected
+phrasing template (A.3) and the five displayed labels are the item's
+options permuted by the selected ordering (A.3). The baseline condition
+fixes ordering = \texttt{ascending}, phrasing = \texttt{direct},
+position = \texttt{system\_then\_user}. Fully instantiated baseline
+example (item \texttt{AGEMAJ\_W41}):
+
+\begin{verbatim}
+[system]
+You are a non-Hispanic white woman in their 30s or 40s with a college
+degree or more, in a middle-income household, who is Democrat or
+Democratic-leaning.
+
+[user]
+According to the U.S. Census Bureau, by the year 2050, the number of
+people in the population who are 65 or older will outnumber people
+younger than 18. In terms of its impact on the country, do you t
+
+Options:
+1. A very good thing
+2. A somewhat good thing
+3. A somewhat bad thing
+4. A very bad thing
+5. Neither a good nor bad thing
+
+Respond with just the number (1-5).
+\end{verbatim}
+
+(The question text is stored verbatim in \texttt{item\_list\_v2.json};
+the truncation of this particular item's stem is present in the data
+file and therefore in the prompt.)
+
+% ------------------------------------------------------------
+\subsection*{A.3\quad PPA perturbation grid (prompt-perturbation averaging)}
+
+The PPA condition re-uses the A.2 template but randomizes, per call,
+one level from each of three factors (random seed 42 + item-key hash).
+
+\textbf{Factor 1 — option orderings} (4 levels). Each sequence lists,
+for displayed positions 1--5, which canonical option index is shown
+there; responses are mapped back to canonical indices before analysis:
+
+\begin{verbatim}
+ascending:  [1, 2, 3, 4, 5]
+descending: [5, 4, 3, 2, 1]
+shuffled_a: [3, 5, 1, 4, 2]
+shuffled_b: [2, 4, 1, 5, 3]
+\end{verbatim}
+
+\textbf{Factor 2 — question phrasings} (3 levels), applied to the raw
+question text \texttt{\{q\}}:
+
+\begin{verbatim}
+direct:       {q}
+indirect:     On a scale from 1 to 5, how would you rate the following
+              question: {q}
+third_person: How would you, in your role, respond to this question: {q}
+\end{verbatim}
+
+(the \texttt{indirect} and \texttt{third\_person} templates are single
+lines in the code; they are wrapped here only for the page width).
+
+\textbf{Factor 3 — persona position} (3 levels), controlling where the
+persona text \texttt{p} goes relative to the A.2 user message
+\texttt{user}:
+
+\begin{verbatim}
+system_then_user: [{role: system, content: p},
+                   {role: user,   content: user}]
+
+user_only:        [{role: user,   content: p + "\n\n" + user}]
+
+user_with_recap:  [{role: system, content: p},
+                   {role: user,   content:
+                      "Given this background, answer:\n\n" + user}]
+\end{verbatim}
+
+% ------------------------------------------------------------
+\subsection*{A.4\quad Describe-pathway prompt, the 100-item expansion run}
+
+Single call per item, $T{=}0$, JSON response format enforced. User
+message (\texttt{build\_describe}; no system prompt):
+
+\begin{verbatim}
+Estimate the distribution of responses to the following Pew survey
+item across a representative sample of U.S. adults. Output a JSON
+object with a single key 'distribution' whose value is a list of
+5 probabilities summing to 1.0, in the order of options 1 through 5.
+
+Question: {question}
+
+Options:
+  1. {option 1}
+  2. {option 2}
+  3. {option 3}
+  4. {option 4}
+  5. {option 5}
+\end{verbatim}
+
+(In the source this is one continuous paragraph followed by the
+question and options; the sentence text is verbatim.)
+
+% ------------------------------------------------------------
+\subsection*{A.5\quad Verbalized-sampling (VS) prompt (the 100-item expansion run and the earlier VS robustness run)}
+
+Single call per item, $T{=}0$, JSON response format enforced. User
+message (\texttt{build\_vs}; no system prompt):
+
+\begin{verbatim}
+For the following survey question, list each possible response option
+along with the proportion of US adults who would select it. Output as
+JSON: a single key 'responses' whose value is a list of objects, each
+with 'response' (string) and 'probability' (number). Probabilities
+must sum to 1. Be precise; this is being used for downstream
+estimation.
+
+Question: {question}
+
+Response options:
+  - {option 1}
+  - {option 2}
+  - {option 3}
+  - {option 4}
+  - {option 5}
+\end{verbatim}
+
+% ------------------------------------------------------------
+\subsection*{A.6\quad Demographically matched Argyle persona (matched-Argyle protocol, paper Appendix on matched Argyle)}
+
+The matched-Argyle protocol replaces the marginal-resampled personas
+of A.1 with personas built from actual Pew respondent rows for each
+item (sampled with survey weights, seed 42 + item-key hash). The persona template is
+byte-identical to A.1:
+
+\begin{verbatim}
+You are a {race} {gender} {age} {educ}, {inc}, who is {party}.
+\end{verbatim}
+
+with the same category mappings as A.1 (fallbacks: \texttt{person} for
+unmapped SEX, raw Pew label for unmapped AGE/RACE/EDUC, empty string
+for unmapped PARTY/INCOME). Each matched persona answers the fixed
+(ascending-order, direct-phrasing) prompt:
+
+\begin{verbatim}
+[system]
+{matched persona descrip}
+
+[user]
+{question}
+
+Options:
+1. {option 1}
+2. {option 2}
+3. {option 3}
+4. {option 4}
+5. {option 5}
+
+Respond with just the number (1-5).
+\end{verbatim}
+
+% ------------------------------------------------------------
+\subsection*{A.7\quad Cross-family RNG probe prompts}
+
+Five conditions, 200 calls each at $T{=}1.0$, user message only:
+
+\begin{verbatim}
+R1_int100: Pick a random integer uniformly between 1 and 100. Output
+           only the integer.
+R2_int10:  Pick a random integer uniformly between 1 and 10. Output
+           only the integer.
+R3_float:  Output a sample from the uniform distribution on the
+           interval [0, 1]. Output only the number.
+R4_coin:   Flip a fair coin. Output H or T.
+R5_letter: Pick a random letter from the English alphabet uniformly at
+           random. Output only the letter.
+\end{verbatim}
+
+(each prompt is a single line in the code).
+
+% ------------------------------------------------------------
+\subsection*{A.8\quad Cross-family seven-target panel prompts}
+
+Seven target distributions, 200 calls each at $T{=}1.0$, user message
+only:
+
+\begin{verbatim}
+point_5:       Always output the digit 5. Reply with just the digit.
+mixture_54:    Output digit 5 with probability 70% and digit 4 with
+               probability 30%. Reply with just the digit.
+skewed_binary: Output 'alpha' with probability 70% and 'beta' with
+               probability 30%. Reply with just the word.
+bimodal_15:    Output digit 1 about 50% and digit 5 about 50%, never
+               2/3/4. Reply with just the digit.
+three_way:     Output A about 50%, B about 30%, C about 20%. Reply with
+               just the letter.
+skewed_5way:   Output a digit: 1 about 40%, 2 about 30%, 3 about 15%,
+               4 about 10%, 5 about 5%. Reply with just the digit.
+uniform_15:    Pick a random digit from 1 to 5 uniformly at random.
+               Reply with just the digit.
+\end{verbatim}
+
+(each prompt is a single line in the code).
+
+% ------------------------------------------------------------
+\subsection*{A.9\quad KNOWS/DOES task prompts, V0 direct sampling (cross-family KNOWS/DOES panel)}
+
+Five tasks; V0 issues the bare instruction 200 times at $T{=}1.0$:
+
+\begin{verbatim}
+uniform_digit: Pick a random digit from 1 to 5 uniformly at random.
+               Reply with just the digit.
+fair_coin:     Flip a fair coin. Output H or T.
+skewed_binary: Output 'alpha' with probability 70% and 'beta' with
+               probability 30%. Reply with just the word.
+bimodal_5way:  Output a digit from 1 to 5 where 1 appears 40%, 2
+               appears 10%, 3 appears 0%, 4 appears 10%, 5 appears 40%.
+               Reply with just the digit.
+skewed_5way:   Output a digit from 1 to 5 where 1 appears 50%, 2
+               appears 20%, 3 appears 10%, 4 appears 10%, 5 appears
+               10%. Reply with just the digit.
+\end{verbatim}
+
+(each prompt is a single line in the code).
+
+% ------------------------------------------------------------
+\subsection*{A.10\quad V7 algorithmic chain-of-thought (inverse-CDF) prompt (cross-family KNOWS/DOES panel)}
+
+System-prompt template (\texttt{build\_v7\_messages}); the user message
+is the task's V0 prompt from A.9. \texttt{\{cum\_str\}} enumerates the
+cumulative distribution, \texttt{\{sup\_str\}} the support:
+
+\begin{verbatim}
+[system]
+Follow this inverse-CDF procedure and output exactly three lines:
+Line 1: 'F={cum_str}'
+Line 2: 'u=<random number in [0,1]>'
+Line 3: 'answer=<your choice from {{sup_str}}>'
+
+[user]
+{v0_prompt}
+\end{verbatim}
+
+Fully instantiated example (task \texttt{uniform\_digit}):
+
+\begin{verbatim}
+[system]
+Follow this inverse-CDF procedure and output exactly three lines:
+Line 1: 'F=F(1)=0.20, F(2)=0.40, F(3)=0.60, F(4)=0.80, F(5)=1.00'
+Line 2: 'u=<random number in [0,1]>'
+Line 3: 'answer=<your choice from {1, 2, 3, 4, 5}>'
+
+[user]
+Pick a random digit from 1 to 5 uniformly at random. Reply with just
+the digit.
+\end{verbatim}
+
+% ------------------------------------------------------------
+\subsection*{A.11\quad V8 list-of-N prompt (cross-family KNOWS/DOES panel)}
+
+User-message template (\texttt{build\_v8\_messages}); one call yields
+20 samples, 10 calls per cell. \texttt{\{freq\_str\}} enumerates
+expected counts \texttt{round(p\_i * 20)} per support element:
+
+\begin{verbatim}
+Generate a list of 20 answers where {freq_str}. Output as JSON with
+key 'samples' whose value is a list of 20 strings.
+\end{verbatim}
+
+Fully instantiated example (task \texttt{uniform\_digit}):
+
+\begin{verbatim}
+Generate a list of 20 answers where '1' about 4 times, '2' about 4
+times, '3' about 4 times, '4' about 4 times, '5' about 4 times. Output
+as JSON with key 'samples' whose value is a list of 20 strings.
+\end{verbatim}
+
+% ------------------------------------------------------------
+\subsection*{A.12\quad V9 parametric-specification prompt (cross-family KNOWS/DOES panel)}
+
+User-message template (\texttt{build\_v9\_messages}); one call at
+$T{=}0$, then 200 external NumPy draws (seed 42) from the returned
+distribution:
+
+\begin{verbatim}
+Output the probability distribution over {{sup_str}} that matches:
+{prob_str}. Output as JSON with key 'distribution' whose value is a
+list of {K} probabilities summing to 1.0.
+\end{verbatim}
+
+Fully instantiated example (task \texttt{uniform\_digit}):
+
+\begin{verbatim}
+Output the probability distribution over {1, 2, 3, 4, 5} that matches:
+P(1)=0.20, P(2)=0.20, P(3)=0.20, P(4)=0.20, P(5)=0.20. Output as JSON
+with key 'distribution' whose value is a list of 5 probabilities
+summing to 1.0.
+\end{verbatim}
+
+% ------------------------------------------------------------
+\subsection*{A.13\quad Correction-strategy prompts V1--V6 (the correction-strategy experiments and the extended non-uniform correction runs)}
+
+Six correction system prompts, each paired with the task's base user
+prompt (V0). The base tasks in the correction-strategy experiments are:
+
+\begin{verbatim}
+uniform_digit V0: Pick a random digit from 1 to 5 uniformly at random.
+                  Reply with just the digit.
+coin_flip V0:     Flip a fair coin. Report heads or tails. Reply with
+                  just the word.
+\end{verbatim}
+
+with task parameters (verbatim from the task-parameter file in the
+supplement):
+
+\begin{verbatim}
+uniform_digit:
+  baseline_behavior_str: digit 1: 0.5%, digit 2: 0.5%, digit 3: 94.5%,
+                         digit 4: 5%, digit 5: 0%
+  mode_label: digit 3        mode_pct: 94.5%
+  target_phrase: uniformly-random digit so that across many responses
+                 you give each digit 1-5 about 20% of the time
+  target_outcome_short: uniform random digit (each digit 1-5 about 20%
+                        of the time)
+
+coin_flip:
+  baseline_behavior_str: heads: 97.5%, tails: 2.5%
+  mode_label: heads          mode_pct: 97.5%
+  target_phrase: fair coin outcome so that across many responses you
+                 give heads about 50% of the time and tails about 50%
+                 of the time
+  target_outcome_short: fair coin outcome (heads about 50%, tails
+                        about 50%)
+\end{verbatim}
+
+\textbf{V1 verbatim feedback} (system-prompt template):
+
+\begin{verbatim}
+I have measured your actual behavior on the prompt
+"{base_user_prompt}". Across 200 runs, you produced:
+{baseline_behavior_str}. This is far from the target. For this task,
+please correct: produce a {target_phrase}.
+\end{verbatim}
+
+Fully instantiated (uniform\_digit):
+
+\begin{verbatim}
+I have measured your actual behavior on the prompt "Pick a random
+digit from 1 to 5 uniformly at random. Reply with just the digit.".
+Across 200 runs, you produced: digit 1: 0.5%, digit 2: 0.5%, digit 3:
+94.5%, digit 4: 5%, digit 5: 0%. This is far from the target. For this
+task, please correct: produce a uniformly-random digit so that across
+many responses you give each digit 1-5 about 20% of the time.
+\end{verbatim}
+
+\textbf{V2 apologetic framing}:
+
+\begin{verbatim}
+I'm sorry for the confusion in our previous conversation. I realize my
+earlier instructions may not have been clear. Let me try again with
+clearer guidance. When you respond to the prompt "{base_user_prompt}",
+I would like you to produce a truly {target_outcome_short}.
+\end{verbatim}
+
+Fully instantiated (uniform\_digit):
+
+\begin{verbatim}
+I'm sorry for the confusion in our previous conversation. I realize my
+earlier instructions may not have been clear. Let me try again with
+clearer guidance. When you respond to the prompt "Pick a random digit
+from 1 to 5 uniformly at random. Reply with just the digit.", I would
+like you to produce a truly uniform random digit (each digit 1-5 about
+20% of the time).
+\end{verbatim}
+
+\textbf{V3 third-person framing}:
+
+\begin{verbatim}
+The assistant has been producing {mode_label} in approximately
+{mode_pct} of trials on the prompt "{base_user_prompt}". The target
+behavior is a {target_outcome_short}. The assistant should now produce
+outputs consistent with this target.
+\end{verbatim}
+
+Fully instantiated (uniform\_digit):
+
+\begin{verbatim}
+The assistant has been producing digit 3 in approximately 94.5% of
+trials on the prompt "Pick a random digit from 1 to 5 uniformly at
+random. Reply with just the digit.". The target behavior is a uniform
+random digit (each digit 1-5 about 20% of the time). The assistant
+should now produce outputs consistent with this target.
+\end{verbatim}
+
+\textbf{V4 explicit bias naming}:
+
+\begin{verbatim}
+You have a known bias toward producing {mode_label} when asked to
+respond to "{base_user_prompt}". This is a documented failure mode in
+language models. Please consciously overcome this bias on the
+following task and produce a {target_phrase}.
+\end{verbatim}
+
+Fully instantiated (uniform\_digit):
+
+\begin{verbatim}
+You have a known bias toward producing digit 3 when asked to respond
+to "Pick a random digit from 1 to 5 uniformly at random. Reply with
+just the digit.". This is a documented failure mode in language
+models. Please consciously overcome this bias on the following task
+and produce a uniformly-random digit so that across many responses you
+give each digit 1-5 about 20% of the time.
+\end{verbatim}
+
+\textbf{V5 in-context demonstration (20 shots)}. The system prompt is
+task-specific in the correction-strategy experiments:
+
+\begin{verbatim}
+uniform_digit:
+Below are examples of correctly producing uniformly-random digits from
+1 to 5. Each subsequent response should be drawn from the same uniform
+distribution.
+
+coin_flip:
+Below are examples of correctly producing fair coin flips. Each
+subsequent response should be drawn from the same fair-coin
+distribution.
+\end{verbatim}
+
+The message list then contains 20 in-context turns: for each
+demonstration value the pair
+(\texttt{user}: base user prompt, \texttt{assistant}: value),
+followed by a final \texttt{user}: base user prompt. The verbatim
+demonstration sequences are:
+
+\begin{verbatim}
+uniform_digit: 4, 1, 5, 2, 3, 4, 5, 1, 2, 3, 5, 1, 4, 2, 3, 4, 1, 5,
+               3, 2
+coin_flip:     heads, tails, heads, tails, tails, heads, tails, heads,
+               heads, tails, tails, heads, tails, heads, heads, tails,
+               tails, heads, tails, heads
+\end{verbatim}
+
+\textbf{V6 step-by-step reasoning}. Task-specific system prompts in
+the correction-strategy experiments:
+
+\begin{verbatim}
+uniform_digit:
+When you respond to the next prompt, follow these steps:
+Step 1: Acknowledge that uniform random sampling means each outcome
+has equal probability.
+Step 2: Identify what the support of the distribution is (digits 1, 2,
+3, 4, 5).
+Step 3: Mentally simulate a process that produces each outcome with
+probability 1/5.
+Step 4: Report the outcome of that simulation as your response.
+
+coin_flip:
+When you respond to the next prompt, follow these steps:
+Step 1: Acknowledge that a fair coin has two outcomes with equal
+probability.
+Step 2: Identify the support (heads, tails).
+Step 3: Mentally simulate a process that produces each outcome with
+probability 1/2.
+Step 4: Report the outcome of that simulation as your response.
+\end{verbatim}
+
+(each \texttt{Step} is a single line in the code). For V6 the user
+message is the base user prompt with the verbatim suffix:
+
+\begin{verbatim}
+ Apply the steps above silently and respond with only the result.
+\end{verbatim}
+
+\textbf{Extended non-uniform correction runs (three non-uniform
+tasks).} The same V1--V4
+templates are instantiated with these task parameters (verbatim):
+
+\begin{verbatim}
+skewed_binary:
+  V0: Output 'alpha' with probability 70% and 'beta' with probability
+      30%. Output one of: alpha, beta. Reply with just the word.
+  baseline_behavior_str: alpha: 100%, beta: 0%
+  mode_label: alpha          mode_pct: 100%
+  target_phrase: [alpha, beta]-valued response so that across many
+                 responses you give alpha about 70% of the time and
+                 beta about 30% of the time
+  target_outcome_short: skewed binary (alpha about 70%, beta about 30%)
+  icl_examples: alpha, beta, alpha, alpha, beta, alpha, alpha, alpha,
+                beta, alpha, alpha, beta, alpha, alpha, alpha, beta,
+                alpha, alpha, alpha, beta
+
+bimodal_5way:
+  V0: Output a digit from 1 to 5 where 1 appears 40% of the time, 2
+      appears 10%, 3 appears 0%, 4 appears 10%, and 5 appears 40%.
+      Reply with just the digit.
+  baseline_behavior_str: digit 1: 100%, others: 0%
+  mode_label: digit 1        mode_pct: 100%
+  target_phrase: digit drawn from [P(1)=0.40, P(2)=0.10, P(3)=0.00,
+                 P(4)=0.10, P(5)=0.40]
+  target_outcome_short: bimodal on {1,2,4,5} with peaks at 1 and 5
+                        (40% each); 3 is impossible
+  icl_examples: 1, 5, 4, 1, 5, 1, 5, 2, 1, 5, 1, 5, 4, 5, 1, 5, 5, 1,
+                2, 5
+
+skewed_5way:
+  V0: Output a digit from 1 to 5 where 1 appears 50%, 2 appears 20%,
+      3 appears 10%, 4 appears 10%, 5 appears 10%. Reply with just the
+      digit.
+  baseline_behavior_str: digit 1: 100%, others: 0%
+  mode_label: digit 1        mode_pct: 100%
+  target_phrase: digit drawn from [P(1)=0.50, P(2)=0.20, P(3)=0.10,
+                 P(4)=0.10, P(5)=0.10]
+  target_outcome_short: skewed 5-way (1 dominant at 50%, others
+                        20/10/10/10)
+  icl_examples: 1, 1, 2, 1, 3, 1, 2, 4, 1, 1, 5, 2, 1, 1, 3, 2, 1, 4,
+                1, 5
+\end{verbatim}
+
+In the extended non-uniform correction runs the V5 system prompt is
+the generic:
+
+\begin{verbatim}
+Below are examples of correctly producing samples from the target
+distribution. Each subsequent response should be drawn from the same
+distribution.
+\end{verbatim}
+
+and the V6 system prompt is
+\texttt{"When you respond to the next prompt, follow these steps:"}
+followed by the task's reasoning lines (verbatim):
+
+\begin{verbatim}
+skewed_binary:
+Step 1: Acknowledge that the target distribution is alpha with
+probability 0.70 and beta with probability 0.30.
+Step 2: Identify the support (alpha, beta).
+Step 3: Mentally simulate a process that produces alpha with
+probability 0.70 and beta with probability 0.30.
+Step 4: Report the outcome of that simulation as your response.
+
+bimodal_5way:
+Step 1: Acknowledge that the target distribution is P(1)=0.40,
+P(2)=0.10, P(3)=0.00, P(4)=0.10, P(5)=0.40.
+Step 2: Identify the support (1, 2, 4, 5) - digit 3 has zero mass and
+must never be produced.
+Step 3: Mentally simulate a process that produces those frequencies.
+Step 4: Report the outcome of that simulation as your response.
+
+skewed_5way:
+Step 1: Acknowledge that the target distribution is P(1)=0.50,
+P(2)=0.20, P(3)=0.10, P(4)=0.10, P(5)=0.10.
+Step 2: Identify the support (1, 2, 3, 4, 5).
+Step 3: Mentally simulate a process that produces those frequencies.
+Step 4: Report the outcome of that simulation as your response.
+\end{verbatim}
+
+(each \texttt{Step} is a single line in the code; the dash in the
+bimodal\_5way Step 2 is an em-dash in the source).
+
+% ------------------------------------------------------------
+\subsection*{A.14\quad Stronger correction strategies V7--V9 (the stronger-corrections follow-up)}
+
+Stronger correction variants (follow-up) on \texttt{uniform\_digit} and
+\texttt{coin\_flip} (note this follow-up's coin task uses the user prompt
+``Flip a fair coin. Report heads or tails. Reply with just the
+word.'').
+
+\textbf{V7 chain-of-thought with explicit probabilities} (system
+prompt; user message is the task's base user prompt, 200 calls at
+$T{=}1.0$):
+
+\begin{verbatim}
+uniform_digit:
+For each request to pick a random digit from 1 to 5, think through the
+following steps silently, then output only the final digit:
+  Step 1: Acknowledge the target distribution. Uniform on {1,2,3,4,5}
+means P(1)=0.2, P(2)=0.2, P(3)=0.2, P(4)=0.2, P(5)=0.2.
+  Step 2: Compute the cumulative distribution: F(1)=0.2, F(2)=0.4,
+F(3)=0.6, F(4)=0.8, F(5)=1.0.
+  Step 3: Mentally draw a random number u in [0, 1].
+  Step 4: Find the smallest digit d with F(d) >= u and output d.
+Output only the final digit, nothing else.
+
+coin_flip:
+For each request to flip a fair coin, think through the following
+steps silently, then output only the final result:
+  Step 1: Acknowledge the target distribution. Fair coin:
+P(heads)=0.5, P(tails)=0.5.
+  Step 2: Mentally draw u in [0, 1].
+  Step 3: If u < 0.5 output heads; otherwise output tails.
+Output only the final result (heads or tails), nothing else.
+\end{verbatim}
+
+(each \texttt{Step} is a single line in the code).
+
+\textbf{V8 list-of-N} (user message only, JSON response format, 10
+calls of 20 samples each; \texttt{list\_size}=20):
+
+\begin{verbatim}
+uniform_digit:
+Produce a list of 20 digits where the digits 1-5 each appear about 4
+times (so the distribution across the 20 outputs is approximately
+uniform on 1-5). Output the 20 digits as a JSON array under the key
+'samples'.
+
+coin_flip:
+Produce a list of 20 coin-flip outcomes (each is either 'heads' or
+'tails') where heads appears about 10 times and tails appears about 10
+times (so the distribution is approximately fair). Output the 20
+outcomes as a JSON array under the key 'samples'.
+\end{verbatim}
+
+\textbf{V9 sampler specification} (user message only, one call at
+$T{=}0$, then 200 external NumPy draws, seed 42):
+
+\begin{verbatim}
+uniform_digit:
+Output the probability distribution over digits 1 to 5 that represents
+a uniform distribution. Output as JSON with key 'distribution' whose
+value is a list of 5 probabilities [p1, p2, p3, p4, p5] summing to
+1.0.
+
+coin_flip:
+Output the probability distribution over {heads, tails} that
+represents a fair coin. Output as JSON with key 'distribution' whose
+value is a list of 2 probabilities [p_heads, p_tails] summing to 1.0.
+\end{verbatim}
+
+% ------------------------------------------------------------
+\subsection*{A.15\quad Alignment-ladder V0 tasks and base-model few-shot format}
+
+Used by the post-training alignment-ladder experiment
+(\texttt{silicon/ladder.py}: OLMo-2 base/SFT/DPO/Instruct,
+Llama-3.1-8B base/instruct, Qwen2.5 base, Qwen2.5-Coder base,
+Qwen2.5 instruct, and Qwen3-8B, run locally; V0 is 200 calls per task at $T{=}1.0$,
+top-$p$ 1.0). The six tasks are the \texttt{point\_5} control plus the
+five KNOWS/DOES tasks; the \texttt{bimodal\_5way} and
+\texttt{skewed\_5way} targets follow the KNOWS/DOES panel (A.9) and
+therefore differ from the seven-target panel's \texttt{bimodal\_15}
+and \texttt{skewed\_5way} targets (A.8). The V0 prompts are:
+
+\begin{verbatim}
+point_5:       Always output the digit 5. Reply with just the digit.
+uniform_digit: Pick a random digit from 1 to 5 uniformly at random.
+               Reply with just the digit.
+fair_coin:     Flip a fair coin. Output H or T.
+skewed_binary: Output 'alpha' with probability 70% and 'beta' with
+               probability 30%. Reply with just the word.
+bimodal_5way:  Output a digit from 1 to 5 where 1 appears 40%, 2
+               appears 10%, 3 appears 0%, 4 appears 10%, 5 appears
+               40%. Reply with just the digit.
+skewed_5way:   Output a digit from 1 to 5 where 1 appears 50%, 2
+               appears 20%, 3 appears 10%, 4 appears 10%, 5 appears
+               10%. Reply with just the digit.
+\end{verbatim}
+
+(each prompt is a single line in the code). Instruct-kind models
+receive the V0 prompt zero-shot through their own chat template.
+Base-kind models instead receive the fixed cross-domain 3-shot prefix
+\texttt{BASE\_SHOTS} followed by \verb|Q: {v0_prompt}| and a newline
+and \verb|A:|; the exemplars teach the bare-answer format without
+demonstrating any answer from the test task's support:
+
+\begin{verbatim}
+Q: Pick a random letter from the English alphabet uniformly at random.
+Output only the letter.
+A: Q
+
+Q: Pick a random integer uniformly between 1 and 100. Output only the
+integer.
+A: 37
+
+Q: Pick a random color from red, green, blue. Output only the color.
+A: green
+\end{verbatim}
+
+(each \texttt{Q:} line is a single line in the code). For the V8
+list-of-20 condition (10 calls per task) the user message is built by
+\texttt{v8\_user\_prompt}, the same construction as A.11 with
+\texttt{\{freq\_str\}} enumerating expected counts
+\texttt{round(p\_i * 20)} per support element:
+
+\begin{verbatim}
+Generate a list of 20 answers where {freq_str}. Output as JSON with
+key 'samples' whose value is a list of 20 strings.
+\end{verbatim}
+
+Base-kind models receive the single canonical V8 exemplar
+\texttt{BASE\_V8\_SHOT} followed by \verb|Q: {user}| and a newline and
+\verb|A:|:
+
+\begin{verbatim}
+Q: Generate a list of 4 answers where 'X' about 2 times, 'Y' about 2
+times. Output as JSON with key 'samples' whose value is a list of 4
+strings.
+A: {"samples": ["X", "Y", "Y", "X"]}
+\end{verbatim}
+
+(the \texttt{Q:} line is a single line in the code).
+
+% ------------------------------------------------------------
+\subsection*{A.16\quad Open-ended survey-domain tasks (four-model grid)}
+
+Used by the open-ended perturbation experiment (\texttt{silicon/openended.py};
+run with \texttt{python run.py openended --model <name>}). Each task has one
+fixed prompt (below), six non-semantic whitespace/punctuation transforms of
+that prompt applied programmatically, and ten semantic paraphrases drawn
+uniformly per call; all paraphrases are reproduced verbatim here. The first entry of each list is the canonical prompt itself, so both perturbed conditions include the fixed prompt in their support.
+
+\paragraph{important problem}
+Fixed prompt:
+\begin{verbatim}
+In your view, what is the most important problem facing the United States today? Answer with a short phrase only.
+\end{verbatim}
+Paraphrases:
+\begin{verbatim}
+In your view, what is the most important problem facing the United States today? Answer with a short phrase only.
+What do you consider the single biggest problem the country faces right now? Short phrase only.
+Name the most pressing issue facing Americans today. Answer in a few words.
+If you had to pick one, what is the top problem confronting the United States? Brief phrase only.
+What national problem concerns you most at present? Answer with a short phrase.
+Which issue facing the country today matters most? A few words only.
+What is the most serious challenge the United States faces today? Short answer only.
+Identify the most important issue for the nation right now. Phrase only.
+In a national survey, you are asked for the country's most important problem. Your short answer:
+What single problem should Americans be most worried about today? Brief phrase.
+\end{verbatim}
+\paragraph{news source}
+Fixed prompt:
+\begin{verbatim}
+Which single news outlet do you rely on most for news? Output only the outlet's name.
+\end{verbatim}
+Paraphrases:
+\begin{verbatim}
+Which single news outlet do you rely on most for news? Output only the outlet's name.
+What is your primary source of news? Name the outlet only.
+Name the one news organization you turn to most often. Outlet name only.
+Where do you get most of your news? Answer with a single outlet name.
+If you could keep only one news source, which would it be? Name only.
+Which news outlet do you check first each day? Output the name only.
+What news source do you trust most? Outlet name only.
+Name your main news outlet. Nothing but the name.
+In a media survey, you are asked for your primary news source. Your answer (name only):
+Which outlet provides most of the news you consume? Name only.
+\end{verbatim}
+\paragraph{policy priority}
+Fixed prompt:
+\begin{verbatim}
+Name one policy area Congress should prioritize this year. Answer with a short phrase only.
+\end{verbatim}
+Paraphrases:
+\begin{verbatim}
+Name one policy area Congress should prioritize this year. Answer with a short phrase only.
+Which policy issue should lawmakers focus on first this year? Short phrase only.
+If Congress could advance one policy area this session, which should it be? Brief phrase.
+What legislative priority matters most right now? Answer in a few words.
+Name the policy domain most deserving of congressional attention. Phrase only.
+Which area of policy should the federal government prioritize? Short answer only.
+Pick one policy area for Congress to act on this year. A few words only.
+What should top the legislative agenda this year? Brief phrase only.
+In a civic survey, you are asked which policy area Congress should prioritize. Your short answer:
+Which single policy issue should receive priority in Washington this year? Phrase only.
+\end{verbatim}
+\paragraph{respondent occupation}
+Fixed prompt:
+\begin{verbatim}
+Generate a plausible occupation for a synthetic survey respondent. Output only the occupation.
+\end{verbatim}
+Paraphrases:
+\begin{verbatim}
+Generate a plausible occupation for a synthetic survey respondent. Output only the occupation.
+Assign an occupation to a simulated survey participant. Occupation only.
+A synthetic respondent needs an occupation field. Provide one. Output the occupation only.
+For a simulated panelist profile, generate the occupation entry. Occupation only.
+Produce one occupation for an artificial survey respondent. Output only the job title.
+Fill in the occupation attribute for a generated respondent. Job title only.
+What occupation should a synthetic panel member have? Output the occupation only.
+Generate the employment field for a simulated respondent record. Occupation only.
+Provide an occupation for a randomly generated survey persona. Occupation only.
+Create one plausible occupation entry for a synthetic respondent. Output only the occupation.
+\end{verbatim}
+\paragraph{respondent city}
+Fixed prompt:
+\begin{verbatim}
+Generate a plausible U.S. city of residence for a synthetic survey respondent. Output only the city name.
+\end{verbatim}
+Paraphrases:
+\begin{verbatim}
+Generate a plausible U.S. city of residence for a synthetic survey respondent. Output only the city name.
+Assign a U.S. city of residence to a simulated survey participant. City name only.
+A synthetic respondent needs a city field. Provide a U.S. city. Name only.
+For a simulated panelist profile, generate the city of residence. U.S. city name only.
+Produce one U.S. city for an artificial survey respondent's location. City only.
+Fill in the residence city for a generated U.S. respondent. City name only.
+In which U.S. city should a synthetic panel member live? Output the city only.
+Generate the location field for a simulated respondent record. U.S. city only.
+Provide a U.S. city of residence for a randomly generated survey persona. City only.
+Create one plausible U.S. city entry for a synthetic respondent. Output only the city.
+\end{verbatim}

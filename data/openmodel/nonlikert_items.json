@@ -1,0 +1,386 @@
+[
+ {
+  "key": "GUN_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "Do you personally own any guns (not including air guns, such as paintball, BB or pellet guns)?",
+  "options": [
+   "Yes, I own a gun",
+   "No, I don't own any guns"
+  ],
+  "k": 2,
+  "pew_dist": [
+   0.3232003891050584,
+   0.6767996108949417
+  ]
+ },
+ {
+  "key": "GUN1_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "Does anyone else in your household own any guns (not including air guns, such as paintball, BB or pellet guns)?",
+  "options": [
+   "Yes, someone else in my household owns a gun",
+   "No, no one else in my household owns a gun"
+  ],
+  "k": 2,
+  "pew_dist": [
+   0.28032148075986363,
+   0.7196785192401364
+  ]
+ },
+ {
+  "key": "EVEROWN_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "Have you ever owned a gun at any point in your life, or have you never owned a gun?",
+  "options": [
+   "Yes, have owned a gun",
+   "No, have never owned a gun"
+  ],
+  "k": 2,
+  "pew_dist": [
+   0.15931108719052745,
+   0.8406889128094726
+  ]
+ },
+ {
+  "key": "NEVEROWN_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "Which best describes you?",
+  "options": [
+   "I could never see myself not owning a gun",
+   "I could see myself not owning a gun at some point in the future"
+  ],
+  "k": 2,
+  "pew_dist": [
+   0.7121212121212122,
+   0.2878787878787879
+  ]
+ },
+ {
+  "key": "EVERSHOT_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "Regardless of whether or not you own a gun, have you ever fired a gun?",
+  "options": [
+   "Yes, I have fired a gun",
+   "No, I have never fired a gun"
+  ],
+  "k": 2,
+  "pew_dist": [
+   0.7690086621751684,
+   0.23099133782483156
+  ]
+ },
+ {
+  "key": "GUNSOCIETY_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "Do you feel that society in general tends to look at most gun owners in a positive way or a negative way?",
+  "options": [
+   "Positive way",
+   "Negative way"
+  ],
+  "k": 2,
+  "pew_dist": [
+   0.4267578125,
+   0.5732421875
+  ]
+ },
+ {
+  "key": "GUNCOMMUNITY_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "Do you feel that people in your local community tend to look at most gun owners in a positive way or a negative way?",
+  "options": [
+   "Positive way",
+   "Negative way"
+  ],
+  "k": 2,
+  "pew_dist": [
+   0.6387460200832721,
+   0.3612539799167279
+  ]
+ },
+ {
+  "key": "GUNCOURSES_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "Have you ever taken any gun safety courses such as weapons training, hunter safety or firearm safety?",
+  "options": [
+   "Yes",
+   "No"
+  ],
+  "k": 2,
+  "pew_dist": [
+   0.38229618909792573,
+   0.6177038109020743
+  ]
+ },
+ {
+  "key": "WORLDDANGER_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "Compared to 50 years ago, do you think",
+  "options": [
+   "We live in a safer world",
+   "We live in a more dangerous world",
+   "The world we live in is neither safer nor more dangerous"
+  ],
+  "k": 3,
+  "pew_dist": [
+   0.0969449121962954,
+   0.704354101515516,
+   0.1987009862881886
+  ]
+ },
+ {
+  "key": "WORRYA_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "How much, if at all, do you worry about the following happening to you? Having your home broken into",
+  "options": [
+   "Worry a lot",
+   "Worry a little",
+   "Do not worry at all"
+  ],
+  "k": 3,
+  "pew_dist": [
+   0.11707789066279632,
+   0.5892597968069666,
+   0.29366231253023706
+  ]
+ },
+ {
+  "key": "WORRYB_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "How much, if at all, do you worry about the following happening to you? Being the victim of a terrorist attack",
+  "options": [
+   "Worry a lot",
+   "Worry a little",
+   "Do not worry at all"
+  ],
+  "k": 3,
+  "pew_dist": [
+   0.08619854721549637,
+   0.4450363196125908,
+   0.4687651331719128
+  ]
+ },
+ {
+  "key": "WORRYC_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "How much, if at all, do you worry about the following happening to you? Losing your job",
+  "options": [
+   "Worry a lot",
+   "Worry a little",
+   "Do not worry at all"
+  ],
+  "k": 3,
+  "pew_dist": [
+   0.1543726235741445,
+   0.4091254752851711,
+   0.43650190114068443
+  ]
+ },
+ {
+  "key": "WORRYD_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "How much, if at all, do you worry about the following happening to you? Not being able to pay your bills",
+  "options": [
+   "Worry a lot",
+   "Worry a little",
+   "Do not worry at all"
+  ],
+  "k": 3,
+  "pew_dist": [
+   0.2295160517489219,
+   0.42453282223287014,
+   0.34595112601820793
+  ]
+ },
+ {
+  "key": "WORRYE_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "How much, if at all, do you worry about the following happening to you? Being the victim of a violent crime",
+  "options": [
+   "Worry a lot",
+   "Worry a little",
+   "Do not worry at all"
+  ],
+  "k": 3,
+  "pew_dist": [
+   0.07446300715990453,
+   0.5221957040572792,
+   0.4033412887828162
+  ]
+ },
+ {
+  "key": "WORRYF_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "How much, if at all, do you worry about the following happening to you? Being the victim of a mass shooting",
+  "options": [
+   "Worry a lot",
+   "Worry a little",
+   "Do not worry at all"
+  ],
+  "k": 3,
+  "pew_dist": [
+   0.06118546845124283,
+   0.3365200764818356,
+   0.6022944550669216
+  ]
+ },
+ {
+  "key": "WORRYG_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "How much, if at all, do you worry about the following happening to you? Having a personal health crisis",
+  "options": [
+   "Worry a lot",
+   "Worry a little",
+   "Do not worry at all"
+  ],
+  "k": 3,
+  "pew_dist": [
+   0.22756795766177532,
+   0.5939379360115468,
+   0.1784941063266779
+  ]
+ },
+ {
+  "key": "SAFECRIME_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "How safe, if at all, would you say your local community is from crime? Would you say it is",
+  "options": [
+   "Very safe",
+   "Somewhat safe",
+   "Not too safe",
+   "Not at all safe"
+  ],
+  "k": 4,
+  "pew_dist": [
+   0.28114478114478114,
+   0.5738335738335738,
+   0.1188071188071188,
+   0.026214526214526215
+  ]
+ },
+ {
+  "key": "GUNIDENTITY_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "How important, if at all, is being a gun owner to your overall identity?",
+  "options": [
+   "Very important",
+   "Somewhat important",
+   "Not too important",
+   "Not at all important"
+  ],
+  "k": 4,
+  "pew_dist": [
+   0.2161144578313253,
+   0.20180722891566266,
+   0.3185240963855422,
+   0.2635542168674699
+  ]
+ },
+ {
+  "key": "SHOOTFREQ_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "How often, if ever, do you go shooting or to a gun range?",
+  "options": [
+   "Often",
+   "Sometimes",
+   "Rarely",
+   "Never"
+  ],
+  "k": 4,
+  "pew_dist": [
+   0.05524518932340161,
+   0.18684047175667287,
+   0.2880198634388578,
+   0.46989447548106766
+  ]
+ },
+ {
+  "key": "GUNACCESS_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "Thinking about when you're at home, would you say there is a gun that is both loaded and easily accessible to you",
+  "options": [
+   "All of the time",
+   "Most of the time",
+   "Only some of the time",
+   "Never"
+  ],
+  "k": 4,
+  "pew_dist": [
+   0.34467120181405897,
+   0.1670445956160242,
+   0.12169312169312169,
+   0.36659108087679515
+  ]
+ },
+ {
+  "key": "GUNCONTRIBA_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "How much, if at all, do you think the ease with which people can legally obtain guns contributes to gun violence in the country today?",
+  "options": [
+   "A great deal",
+   "A fair amount",
+   "Not too much",
+   "Not at all"
+  ],
+  "k": 4,
+  "pew_dist": [
+   0.31573873222463245,
+   0.2812725958062184,
+   0.26367799469751746,
+   0.1393106772716317
+  ]
+ },
+ {
+  "key": "GUNCONTRIBB_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "How much, if at all, do you think the ease with which people can illegally obtain guns contributes to gun violence in the country today?",
+  "options": [
+   "A great deal",
+   "A fair amount",
+   "Not too much",
+   "Not at all"
+  ],
+  "k": 4,
+  "pew_dist": [
+   0.5826714801444043,
+   0.3025270758122744,
+   0.08134777376654632,
+   0.03345367027677497
+  ]
+ },
+ {
+  "key": "GUNCONTRIBC_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "How much, if at all, do you think the amount of gun violence in movies and television contributes to gun violence in the country today?",
+  "options": [
+   "A great deal",
+   "A fair amount",
+   "Not too much",
+   "Not at all"
+  ],
+  "k": 4,
+  "pew_dist": [
+   0.24793789422610382,
+   0.3726346433770015,
+   0.30858806404657935,
+   0.07083939835031539
+  ]
+ },
+ {
+  "key": "GUNCONTRIBD_W26",
+  "wave": "American_Trends_Panel_W26",
+  "question": "How much, if at all, do you think lack of economic opportunities contributes to gun violence in the country today?",
+  "options": [
+   "A great deal",
+   "A fair amount",
+   "Not too much",
+   "Not at all"
+  ],
+  "k": 4,
+  "pew_dist": [
+   0.24052478134110788,
+   0.41156462585034015,
+   0.2725947521865889,
+   0.07531584062196307
+  ]
+ }
+]

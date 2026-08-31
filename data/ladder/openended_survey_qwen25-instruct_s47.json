@@ -1,0 +1,152 @@
+[
+ {
+  "model": "qwen25-instruct",
+  "task": "important_problem",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 21,
+  "top1": "Economic Inequality",
+  "top1_share": 0.8,
+  "entropy_nats": 1.022
+ },
+ {
+  "model": "qwen25-instruct",
+  "task": "important_problem",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 21,
+  "top1": "Economic Inequality",
+  "top1_share": 0.775,
+  "entropy_nats": 1.093
+ },
+ {
+  "model": "qwen25-instruct",
+  "task": "important_problem",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 68,
+  "top1": "Economic Inequality",
+  "top1_share": 0.37,
+  "entropy_nats": 3.022
+ },
+ {
+  "model": "qwen25-instruct",
+  "task": "news_source",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 25,
+  "top1": "Reuters",
+  "top1_share": 0.52,
+  "entropy_nats": 1.688
+ },
+ {
+  "model": "qwen25-instruct",
+  "task": "news_source",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 25,
+  "top1": "Reuters",
+  "top1_share": 0.54,
+  "entropy_nats": 1.683
+ },
+ {
+  "model": "qwen25-instruct",
+  "task": "news_source",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 62,
+  "top1": "Reuters",
+  "top1_share": 0.18,
+  "entropy_nats": 3.302
+ },
+ {
+  "model": "qwen25-instruct",
+  "task": "policy_priority",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 29,
+  "top1": "Healthcare Reform",
+  "top1_share": 0.335,
+  "entropy_nats": 2.088
+ },
+ {
+  "model": "qwen25-instruct",
+  "task": "policy_priority",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 28,
+  "top1": "Infrastructure Investment",
+  "top1_share": 0.335,
+  "entropy_nats": 2.084
+ },
+ {
+  "model": "qwen25-instruct",
+  "task": "policy_priority",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 103,
+  "top1": "Healthcare Policy",
+  "top1_share": 0.105,
+  "entropy_nats": 4.196
+ },
+ {
+  "model": "qwen25-instruct",
+  "task": "respondent_occupation",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 10,
+  "top1": "Data Analyst",
+  "top1_share": 0.85,
+  "entropy_nats": 0.648
+ },
+ {
+  "model": "qwen25-instruct",
+  "task": "respondent_occupation",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 10,
+  "top1": "Data Analyst",
+  "top1_share": 0.775,
+  "entropy_nats": 0.844
+ },
+ {
+  "model": "qwen25-instruct",
+  "task": "respondent_occupation",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 17,
+  "top1": "Data Analyst",
+  "top1_share": 0.23,
+  "entropy_nats": 2.161
+ },
+ {
+  "model": "qwen25-instruct",
+  "task": "respondent_city",
+  "condition": "fixed",
+  "n_valid": 200,
+  "distinct": 16,
+  "top1": "Chicago",
+  "top1_share": 0.43,
+  "entropy_nats": 1.999
+ },
+ {
+  "model": "qwen25-instruct",
+  "task": "respondent_city",
+  "condition": "nonsemantic",
+  "n_valid": 200,
+  "distinct": 15,
+  "top1": "Chicago",
+  "top1_share": 0.565,
+  "entropy_nats": 1.675
+ },
+ {
+  "model": "qwen25-instruct",
+  "task": "respondent_city",
+  "condition": "semantic",
+  "n_valid": 200,
+  "distinct": 34,
+  "top1": "Chicago",
+  "top1_share": 0.41,
+  "entropy_nats": 2.335
+ }
+]

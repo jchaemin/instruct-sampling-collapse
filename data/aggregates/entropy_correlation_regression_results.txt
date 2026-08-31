@@ -1,0 +1,26 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               delta_TV   R-squared:                       0.553
+Model:                            OLS   Adj. R-squared:                  0.500
+Method:                 Least Squares   F-statistic:                     10.51
+Date:                Mon, 25 May 2026   Prob (F-statistic):            0.00107
+Time:                        22:15:58   Log-Likelihood:                 27.972
+No. Observations:                  20   AIC:                            -49.94
+Df Residuals:                      17   BIC:                            -46.96
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.1141      0.154      0.742      0.468      -0.210       0.438
+delta_H        0.2664      0.060      4.463      0.000       0.140       0.392
+H_Pew         -0.0768      0.102     -0.754      0.461      -0.291       0.138
+==============================================================================
+Omnibus:                        5.975   Durbin-Watson:                   1.637
+Prob(Omnibus):                  0.050   Jarque-Bera (JB):                3.530
+Skew:                           0.811   Prob(JB):                        0.171
+Kurtosis:                       4.266   Cond. No.                         23.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
